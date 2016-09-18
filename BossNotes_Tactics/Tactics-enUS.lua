@@ -779,4 +779,62 @@ L["encounter:79912"] = "Kill trash waves for boss to come out. Dodge skyreaver’s
 L["encounter:76585"] = "Boss spits and sets fire to portions of bridge that disorient and heavily damage players. Watch where boss is facing during Engulfing Fire and run to opposite direction to avoid. Gather whelplings, AOE down. Avoid fire puddles. Dispel boss enrage.\nHEROIC CHANGES: No real changes to heroic, but Engulfing Flames is less predictable. Boss enrage hits harder, make sure to try and dispel if you can or pop hero/lust to push through it."
 L["encounter:77120"] = "Boss puts cyclone on someone – kite it away from the rest of the party. Hurls blade that ricochets, spread out. At 60%, she gets on drake and adds come out. Avoid fire on bridge. After 40sec, boss comes back and resumes as the fight was in start.\nHEROIC CHANGES: Boss also knocks back and can knock off platform. Tank can avoid by holding her in middle until last phase, when you must be careful due to Burning Breath from adds. Adds also knock back when they come out, so be careful!"
 
+--Legion By Horrorbrood
+--Dungeons
+--Eye of Azshara
+L["encounter:91784"] = "Tank:\n Taunt Adds that Spawn, stay out of the way of Impaling Spear\nDPS:\n kill adds and inturrup... as they spawn killing Hatecoil Crushers frist. Adds can be killed by directing Impaling Spear at an add\nHealer:\nHeal players with Throw Spear Debuff and Impaling Spear Targets, avoid Crashing Wave\nHeroic/Mythic:\n Boss Summons two adds and Crushing Wave will leave Pools Of Quicksand that slow and deal damange"
+L["encounter:91789"] = "When Lady Hate Coil Casts Static Nova stand on a sand pile, when she casts Focused Lightning stand on water. Kill adds as they spawn tank must pick them up.\nHeroic/Mythic:\nMonsoon small tornado that targets players and destroys sand dunes, kite monsoon away from dunes close to party"
+L["encounter:91808"] = "KILL ALL ADDS AROUND BOSS\n Move from poison on ground, at 66% health Serpentrix will Submerge and respawn with 2 Blazing Hydra Dps must kill and inturrupt their AOE spell while tank stays in melee range of Serpentrix and intruppts AOE spell. Repeat at 33%\n If hydras are not killed they will remain during the entire fight\nHeroic/Mythic:\nNew hyra in place of one blazing hydra. Arcane hydra cat Arcane Nova must be inturruped to avoid stacking debuff First priority "
+L["encounter:91797"] = "Tank:\nMove out of the  Ground Slam Move away from the  Aftershock area after Deepbeard casts  Quake Save powerful cooldowns for the final 30%, when Deepbeard enters a  Frenzy King Deepbeard\nDPS:\nSpread out greater than 5 yards from one another in preparation for  Quake .Move out of the  Aftershock area after Deepbeard casts Quake.If affected by  Gaseous Bubbles, do not chase the  Call the Seas puddles around - wait for  Quake, and stand in the  Aftershock area to clear the bubble Stay away from the front of the boss to avoid being affected by Ground Slam\nHealer:\nSame as Dps but tank requires more healing during Frenzy.\nHeroic/Mythic:\nthe damage dealt by  Gaseous Explosion is proportional to the amount of damage absorption left on the  Gaseous Bubbles when it expires"
+L["encounter:96028"] = "Dodge Massive Deluge, Tank keep the Wrath of Azshara facing about 90 degrees away from the party so no other players are threatened by it.Do not step into the pool in the center of the island.Avoid the Tidal Waves and  Mystic Tornado spawns near you.Step out of any  Lightning Strike areas near you. Tank Use stronger cooldowns during the Cry of Wrath phase.If targeted with  Arcane Bomb, move out to the edge of the island, wait for the debuff to be dispelled, then move away from the  Arcane Bomb\nHeroic/Mythic:Crushing Depths targets a non-tank player. Dps should stand in this to divide damage delt."
+--Halls of Valor
+L["encounter:94960"] = "Hymdall-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:96646"] = "Hyrja-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:99868"] = "Fenryr-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:97226"] = "God-King Skovald-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:98196"] = "Odyn-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+--Neltharions Lair
+L["encounter:91003"] = "Rokmora-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:97827"] = "Ularogg Cragshaper-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:91005"] = "Naraxas-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:99460"] = "Dargul the Underking"
+--Darkheart Thicket
+L["encounter:96512"] = "Archdruid Glaidalis-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:103344"] = "Oakheart-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:99200"] = "Dresaron-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:101403"] = "Shade of Xavius-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+--Violet Hold
+L["encounter:102618"] = "MindFlayer Kaahrj-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:102616"] = "Millificent Manastorm-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:102615"] = "Festerface-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:102619"] = "Shivermaw-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:102617"] = "Anub'esset-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:102387"] = "Sael'orn-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:102614"] = "Blood-Princess Thal'ena-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:106373"] = "Fel Lord Betrug-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+--Black Rook Hold
+L["encounter:98542"] = "The Amalgam Of Souls-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:98696"] = "Illysanna Ravencrest"
+L["encounter:98949"] = "Smashspite the Hateful"
+L["encounter:94923"] = "Lord Kur'talos Ravencrest"
+--Maw Of Souls
+L["encounter:96756"] = "Ymiron, the Fallen King-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:96754"] = "Harbaron-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:96759"] = "Helya-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+--Vault of the Wardens
+L["encounter:99198"] = "Tirathon Saltheril-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:95886"] = "Ash'golm-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:99865"] = "Glazer-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:95888"] = "Cordana Felsong-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:96015"] = "Inqisitor Tormentorum-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+--The Arcway
+L["encounter:98203"] = "Ivanyr-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:98205"] = "Corstilax-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:98206"] = "General Xakal-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:98207"] = "Nal'tira-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:98208"] = "Advisor Vandros-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+--Court Of Stars
+L["encounter:104215"] = "Patrol Captain Gerdo-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:104217"] = "Talixae Flamewreath-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
+L["encounter:106576"] = "Advisor Melandrus-Feel Free to submit a strategy email saywhat1989@gmail.com to expedite BossNotes Release"
 end

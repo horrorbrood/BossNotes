@@ -24,35 +24,265 @@ BOSS_NOTES_ENCOUNTERS = {
 		raid = false,
 		instances = {
 			{
-				--Auchindoun
+				--Eye of Azshara
 				instanceId = "LEOA",
-				npcIds = { },
+				npcIds = {91784, 97269, 97264, 91789, 91808,91797, 96028},
 				encounters = {
 					{
-						-- 
+						-- "Warlord Parjesh"
 						encounterId = 91784,
 						npcIds = {91784, 97269, 97264}
 					},
 					
 					{
-						-- 
+						-- "Lady Hatecoil"
 						encounterId = 91789
 					},
 					{
-						-- 
+						-- "Serpentrix"
 						encounterId = 91808
 					},
 					
 					{
-						-- 
+						-- "King Deepbeard"
 						encounterId = 91797
 					},
 					{
-						-- 
+						-- "Wrath Of Azshara"
 						encounterId = 96028
 					},
 				},
 			},	
+			{
+				--Halls of Valor 
+				instanceId = "LHOV",
+				npcIds = {94960, 96646, 99868, 97226, 98196},
+				encounters = {
+					{
+						-- "Hymdall"
+						encounterId = 94960
+					},
+					{
+						-- "Hyrja"
+						encounterId = 96646
+					},
+					{
+						-- "Fenryr"
+						encounterId = 99868
+					},
+					{
+						-- "God-King Skovald"
+						encounterId = 97226
+					},
+					{
+						-- "Odyn"
+						encounterId = 98196
+					},
+				},
+			},
+			{
+				--Neltharions Lair
+				instanceId = "LNL",
+				npcIds = {91003, 97827, 91005, 99460},
+				encounters = {
+					{
+						-- "Rokmora"
+						encounterId = 91003
+					},
+					{
+						-- "Ularogg Cragshaper"
+						encounterId = 97827
+					},
+					{
+						-- "Naraxas"
+						encounterId = 91005
+					},
+					{
+						-- "Dargul the Underking"
+						encounterId = 99460
+					},
+				},
+			},
+			{
+				--Darkheart Thicket
+				instanceId = "LDT",
+				npcIds = {96512, 103344, 99200, 101403},
+				encounters = {
+					{
+						-- "Archdruid Glaidalis"
+						encounterId = 96512
+					},
+					{
+						-- "Oakheart"
+						encounterId = 103344
+					},
+					{
+						-- "Dresaron"
+						encounterId = 99200
+					},
+					
+					{
+						-- "Shade of Xavius"
+						encounterId = 101403
+					},
+				},
+			},
+			{
+				--Violet Hold
+				instanceId = "LVH",
+				npcIds = {102618, 102616, 102615, 102619, 102617, 102387, 102614, 106373},
+				encounters = {
+					{
+						-- "MindFlayer Kaahrj"
+						encounterId = 102618
+					},
+					{
+						-- "Millificent Manastorm"
+						encounterId = 102616
+					},
+					{
+						-- "Festerface"
+						encounterId = 102615
+					},
+					{
+						-- "Shivermaw"
+						encounterId = 102619
+					},
+					{
+						-- "Anub'esset"
+						encounterId = 102617
+					},
+					{
+						-- "Sael'orn"
+						encounterId = 102387
+					},
+					{
+						-- "Blood-Princess Thal'ena"
+						encounterId = 102614
+					},
+					{
+						-- "Fel Lord Betrug"
+						encounterId = 106373
+					},
+				},
+			},
+			{
+				--Black Rook Hold
+				instanceId = "LBRH",
+				npcIds = {98542, 98696, 98949, 94923},
+				encounters = {
+					{
+						-- "The Amalgam Of Souls"
+						encounterId = 98542
+					},
+					{
+						-- "Illysanna Ravencrest"
+						encounterId = 98696
+					},
+					{
+						-- "Smashspite the Hateful"
+						encounterId = 98949
+					},
+					{
+						-- "Lord Kur'talos Ravencrest"
+						encounterId = 94923
+					},
+				},
+			},
+			{
+				--Maw Of Souls
+				instanceId = "LMOS",
+				npcIds = {96756, 96754, 96759},
+				encounters = {
+					{
+						-- "Ymiron, the Fallen King"
+						encounterId = 96756
+					},
+					{
+						-- "Harbaron"
+						encounterId = 96754
+					},
+					{
+						-- "Helya"
+						encounterId = 96759
+					},
+
+				},
+			},
+			{
+				--Vault of the Wardens
+				instanceId = "LVOTW",
+				npcIds = {99198, 95886, 99865, 95888, 96015},
+				encounters = {
+					{
+						-- "Tirathon Saltheril"
+						encounterId = 99198
+					},
+					{
+						-- "Ash'golm"
+						encounterId = 95886
+					},
+					{
+						-- "Glazer"
+						encounterId = 99865
+					},
+					{
+						-- "Cordana Felsong"
+						encounterId = 95888
+					},
+					{
+						-- "Inqisitor Tormentorum"
+						encounterId = 96015
+					},
+				},
+			},
+			{
+				--The Arcway
+				instanceId = "LTA",
+				npcIds = {98203, 98205, 98206, 98207, 98208},
+				encounters = {
+					{
+						-- "Ivanyr"
+						encounterId = 98203
+					},
+					{
+						-- "Corstilax"
+						encounterId = 98205
+					},
+					{
+						-- "General Xakal"
+						encounterId = 98206
+					},
+					{
+						-- "Nal'tira"
+						encounterId = 98207
+					},
+					{
+						-- "Advisor Vandros"
+						encounterId = 98208
+					},
+				},
+			},
+			{
+				--Court Of Stars
+				instanceId = "LCOF",
+				npcIds = {104215, 104217, 106576},
+				encounters = {
+					{
+						-- "Patrol Captain Gerdo"
+						encounterId = 104215
+					},
+					{
+						-- "Talixae Flamewreath"
+						encounterId = 104217
+					},
+					{
+						-- "Advisor Melandrus"
+						encounterId = 106576
+					},
+
+				},
+			},
 		},
 	},
 	{

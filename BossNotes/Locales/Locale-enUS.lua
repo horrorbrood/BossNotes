@@ -1618,7 +1618,7 @@ L["encounter:76021"] = "Kyrak"
 L["encounter:79912"] = "Commander Tharbek"
 L["encounter:76585"] = "Ragewing the Untamed"
 L["encounter:77120"] = "Warlord Zaela"
-
+-------------------------------------------------
 --Added By Horrorbrood
 L["LegionDungeon"] = "Legion Dungeons"
 --Eye of Azshara
@@ -1628,4 +1628,65 @@ L["encounter:91789"] = "Lady Hatecoil"
 L["encounter:91808"] = "Serpentrix"
 L["encounter:91797"] = "King Deepbeard"
 L["encounter:96028"] = "Wrath Of Azshara"
+--Halls of Valor
+L["instance:LHOV"]="Halls Of Valor"
+L["encounter:94960"] = "Hymdall"
+L["encounter:96646"] = "Hyrja"
+L["encounter:99868"] = "Fenryr"
+L["encounter:97226"] = "God-King Skovald"
+L["encounter:98196"] = "Odyn"
+--Neltharions Lair
+L["instance:LNL"]="Neltharion's Lair"
+L["encounter:91003"] = "Rokmora"
+L["encounter:97827"] = "Ularogg Cragshaper"
+L["encounter:91005"] = "Naraxas"
+L["encounter:99460"] = "Dargul the Underking"
+--Darkheart Thicket
+L["instance:LDT"]="Darkheard Thicket"
+L["encounter:96512"] = "Archdruid Glaidalis"
+L["encounter:103344"] = "Oakheart"
+L["encounter:99200"] = "Dresaron"
+L["encounter:101403"] = "Shade of Xavius"
+--Violet Hold
+L["instance:LVH"]="Violet Hold"
+L["encounter:102618"] = "MindFlayer Kaahrj"
+L["encounter:102616"] = "Millificent Manastorm"
+L["encounter:102615"] = "Festerface"
+L["encounter:102619"] = "Shivermaw"
+L["encounter:102617"] = "Anub'esset"
+L["encounter:102387"] = "Sael'orn"
+L["encounter:102614"] = "Blood-Princess Thal'ena"
+L["encounter:106373"] = "Fel Lord Betrug"
+--Black Rook Hold
+L["instance:LBRH"]="Black Rook Hold"
+L["encounter:98542"] = "The Amalgam Of Souls"
+L["encounter:98696"] = "Illysanna Ravencrest"
+L["encounter:98949"] = "Smashspite the Hateful"
+L["encounter:94923"] = "Lord Kur'talos Ravencrest"
+--Maw Of Souls
+L["instance:LMOS"]="Maw Of Souls"
+L["encounter:96756"] = "Ymiron, the Fallen King"
+L["encounter:96754"] = "Harbaron"
+L["encounter:96759"] = "Helya"
+--Vault of the Wardens
+L["instance:LVOTW"]="Vault of the Wardens"
+L["encounter:99198"] = "Tirathon Saltheril"
+L["encounter:95886"] = "Ash'golm"
+L["encounter:99865"] = "Glazer"
+L["encounter:95888"] = "Cordana Felsong"
+L["encounter:96015"] = "Inqisitor Tormentorum"
+--The Arcway
+L["instance:LTA"]="The Arcway"
+L["encounter:98203"] = "Ivanyr"
+L["encounter:98205"] = "Corstilax"
+L["encounter:98206"] = "General Xakal"
+L["encounter:98207"] = "Nal'tira"
+L["encounter:98208"] = "Advisor Vandros"
+--Court Of Stars
+L["instance:LCOF"]="Court Of Stars"
+L["encounter:104215"] = "Patrol Captain Gerdo"
+L["encounter:104217"] = "Talixae Flamewreath"
+L["encounter:106576"] = "Advisor Melandrus"
+
+
 end
