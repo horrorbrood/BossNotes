@@ -1,0 +1,35 @@
+------------------------------------------------------------------------
+r401 | iverie | 2014-02-04 21:47:54 +0000 (Tue, 04 Feb 2014) | 1 line
+Changed paths:
+   A /tags/1.5.4.10 (from /trunk:400)
+
+Tagging as 1.5.4.10
+------------------------------------------------------------------------
+r400 | iverie | 2014-02-03 04:19:12 +0000 (Mon, 03 Feb 2014) | 3 lines
+Changed paths:
+   M /trunk/Tactics/Tactics-enUS.lua
+
+Updated tactics for Mogu'shan Vaults Normal and Heroic.
+Updated tactics for Heart of Fear Normal and Heroic.
+Updated tactics for Terrace of Endless Spring Normal and Heroic.
+------------------------------------------------------------------------
+r398 | iverie | 2014-02-01 19:44:57 +0000 (Sat, 01 Feb 2014) | 1 line
+Changed paths:
+   M /trunk/Tactics/Tactics-enUS.lua
+
+New line coding corrections.
+------------------------------------------------------------------------
+r397 | iverie | 2014-02-01 19:17:26 +0000 (Sat, 01 Feb 2014) | 3 lines
+Changed paths:
+   M /trunk/Tactics/Tactics-enUS.lua
+
+Update tactics for Mists of Pandaria Outdoor Bosses.
+Update tactics for Throne of Thunder Normal.
+Add tactics for Throne of Thunder Heroic.
+------------------------------------------------------------------------
+r395 | iverie | 2014-01-16 13:47:48 +0000 (Thu, 16 Jan 2014) | 1 line
+Changed paths:
+   M /trunk/Tactics/Tactics-enUS.lua
+
+Updated tactics for Siege of Orgrimmar Normal.
+------------------------------------------------------------------------

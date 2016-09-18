@@ -1,0 +1,17 @@
+<!--
+
+(C) Copyright 2009,2010 Bethink (bethink at naef dot com)
+See LICENSE.txt for license terms.
+
+-->
+<Ui
+	xmlns="http://www.blizzard.com/wow/ui/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<!-- Context menu -->
+	<Frame name="BossNotesTacticsContextMenu" inherits="UIMenuTemplate" frameStrata="FULLSCREEN" enableMouse="true" clampedToScreen="true" hidden="true">
+		<Scripts>
+			<OnLoad>BossNotesTactics:OnLoadContextMenu(self)</OnLoad>
+		</Scripts>
+	</Frame>
+</Ui>

@@ -1,0 +1,21 @@
+﻿## Interface: 70000
+## Title: Boss Notes [|cffe76f00Tactics|r]
+## Title-deDE: Boss Notes [|cffe76f00Taktiken|r]
+## Title-zhTW: Boss Notes [|cffe76f00戰術|r]
+## Title-zhCN: Boss Notes [|cffe76f00战术|r]
+## Notes: Boss Notes module providing short boss tactics.
+## Notes-deDE: Boss Notes-Modul mit kurzen Boss-Taktiken.
+## Notes-zhTW: Boss Notes 首領戰術模組。
+## Notes-zhCN: Boss Notes 首领战术模块。
+## Author: DrKazza, Bethink
+## Updated for WoD: LintyDruid
+## Updated for Legion: Horrorbrood
+## Dependencies: BossNotes
+## X-Curse-Packaged-Version: 1.6.0.1
+## X-Curse-Project-Name: Boss Notes
+## X-Curse-Project-ID: boss-notes
+## X-Curse-Repository-ID: wow/boss-notes/mainline
+Tactics-enUS.lua
+Tactics-koKR.lua
+Tactics.lua
+Tactics.xml

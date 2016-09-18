@@ -1,0 +1,447 @@
+<!--
+
+(C) Copyright 2009 Bethink (bethink at naef dot com)
+See LICENSE.txt for license terms.
+
+-->
+<Ui
+	xmlns="http://www.blizzard.com/wow/ui/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	<!-- Script -->
+	<Script file="BossNotesFrame.lua" />
+
+	<!-- Source template -->
+	<Button name="BossNotesSourceButtonTemplate" hidden="false" virtual="true">
+		<Size>
+			<AbsDimension x="293" y="16" /> 
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="$parentTag" inherits="GameFontNormal" justifyH="RIGHT">
+					<Size>
+						<AbsDimension x="0" y="16" /> 
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset>
+								<AbsDimension x="-2" y="1" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>self:SetFrameLevel(self:GetFrameLevel() + 1)</OnLoad> 
+			<OnMouseDown>BossNotes:OnMouseDownSourceButton(self, button)</OnMouseDown> 
+		</Scripts>
+		<ButtonText name="$parentText">
+			<Size x="270" y="13" /> 
+			<Anchors>
+				<Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT">
+					<Offset>
+						<AbsDimension x="2" y="1" /> 
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</ButtonText>
+		<NormalFont style="GameFontNormalLeft" /> 
+	</Button>
+	
+	<!-- Header font -->
+	<Font name="BossNotesFontHeader" inherits="GameFontNormal" virtual="true">
+		<Color r="0.91" g="0.44" b="0.0"/>
+	</Font>
+	
+	<!-- Boss Notes frame -->
+	<Frame name="BossNotesFrame" toplevel="true" movable="true" parent="UIParent" enableMouse="true" hidden="true">
+		<Size> 
+			<AbsDimension x="384" y="512" /> 
+		</Size> 
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="0" y="-104" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<HitRectInsets>
+			<AbsInset left="0" right="30" top="0" bottom="45" /> 
+		</HitRectInsets>
+		<Layers> 
+			<!-- Background layer -->
+			<Layer level="BACKGROUND"> 
+				<Texture name="BossNotesFramePortrait">
+					<Size>
+						<AbsDimension x="60" y="60" /> 
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="7" y="-6" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			
+			<!-- Artwork layer -->
+			<Layer level="ARTWORK">
+				<Texture file="Interface\PaperDollInfoFrame\UI-Character-General-TopLeft">
+					<Size>
+						<AbsDimension x="256" y="256" /> 
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="2" y="-1" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture file="Interface\PaperDollInfoFrame\UI-Character-General-TopRight">
+					<Size>
+						<AbsDimension x="128" y="256" /> 
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="258" y="-1" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture file="Interface\PaperDollInfoFrame\SkillFrame-BotLeft">
+					<Size>
+						<AbsDimension x="256" y="256" /> 
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="2" y="-1" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture file="Interface\PaperDollInfoFrame\SkillFrame-BotRight">
+					<Size>
+						<AbsDimension x="128" y="256" /> 
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="-1" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			
+			<!-- Overlay layer -->
+			<Layer level="OVERLAY">
+				<Texture name="BossNotesHorizontalBarLeft" file="Interface\ClassTrainerFrame\UI-ClassTrainer-HorizontalBar">
+					<Size>
+						<AbsDimension x="256" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="15" y="-201"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="1.0" top="0" bottom="0.25"/>
+				</Texture>
+				<Texture file="Interface\ClassTrainerFrame\UI-ClassTrainer-HorizontalBar">
+					<Size>
+						<AbsDimension x="75" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="BossNotesHorizontalBarLeft" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="0.29296875" top="0.25" bottom="0.5"/>
+				</Texture>
+				<Texture file="Interface\ClassTrainerFrame\UI-ClassTrainer-ScrollBar">
+					<Size>
+						<AbsDimension x="30" y="120" /> 
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="-70" y="-212" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0" right="0.46875" top="0.0234375" bottom="0.9609375" /> 
+				</Texture>
+				<Texture file="Interface\ClassTrainerFrame\UI-ClassTrainer-ScrollBar">
+					<Size>
+						<AbsDimension x="30" y="123" /> 
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-70" y="100" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.53125" right="1.0" top="0.03125" bottom="1.0" /> 
+				</Texture>
+				<FontString name="BossNotesMetaData" inherits="GameFontNormalSmall">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="28" y="-417" /> 
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="1.0" /> 
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<!-- Title bar -->
+			<Frame name="BossNotesFrameTitleFrame">
+				<Size>
+					<AbsDimension x="109" y="12" /> 
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER">
+						<Offset>
+							<AbsDimension x="6" y="232" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString name="BossNotesFrameTitleText" inherits="GameFontNormal">
+							<Size>
+								<AbsDimension x="300" y="12" /> 
+							</Size>
+							<Anchors>
+								<Anchor point="CENTER" /> 
+							</Anchors>
+							<Color r="1.0" g="1.0" b="1.0" /> 
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Button name="BossNotesFrameCloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="CENTER" relativeTo="BossNotesFrame" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-44" y="-25" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			
+			<!-- Drop downs -->
+			<Frame name="BossNotesInstanceDropDown" inherits="UIDropDownMenuTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="60" y="-48" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>UIDropDownMenu_SetWidth(self, 120)</OnLoad>
+				</Scripts>
+			</Frame>
+			<Frame name="BossNotesEncounterDropDown" inherits="UIDropDownMenuTemplate" id="2">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="192" y="-48" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>UIDropDownMenu_SetWidth(self, 120)</OnLoad>
+				</Scripts>
+			</Frame>
+			
+			<!-- Source list -->
+			<Frame name="BossNotesSourceHighlightFrame" hidden="true">
+				<Size>
+					<AbsDimension x="293" y="16" /> 
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" /> 
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="BossNotesSourceHighlight" file="Interface\Buttons\UI-Listbox-Highlight2" /> 
+					</Layer>
+				</Layers>
+			</Frame>
+			<Button name="BossNotesSource1" inherits="BossNotesSourceButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BossNotesFrame">
+						<Offset>
+							<AbsDimension x="22" y="-76" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="BossNotesSource2" inherits="BossNotesSourceButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BossNotesSource1" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="BossNotesSource3" inherits="BossNotesSourceButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BossNotesSource2" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="BossNotesSource4" inherits="BossNotesSourceButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BossNotesSource3" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="BossNotesSource5" inherits="BossNotesSourceButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BossNotesSource4" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="BossNotesSource6" inherits="BossNotesSourceButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BossNotesSource5" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="BossNotesSource7" inherits="BossNotesSourceButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BossNotesSource6" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="BossNotesSource8" inherits="BossNotesSourceButtonTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="BossNotesSource7" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<ScrollFrame name="BossNotesSourceListScrollFrame" inherits="FauxScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="296" y="130" /> 
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="BossNotesFrame" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-67" y="-76" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnVerticalScroll>FauxScrollFrame_OnVerticalScroll(self, offset, BOSS_NOTES_SOURCE_HEIGHT, BossNotesFrame_UpdateSourceList)</OnVerticalScroll> 
+				</Scripts>
+			</ScrollFrame>			
+			
+			<!-- Note -->
+			<ScrollFrame name="BossNotesNoteScrollFrame" inherits="UIPanelScrollFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="24" y="-214" /> 
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="-67" y="102" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown>BossNotes:OnClickNoteScrollFrame(self, button)</OnMouseDown>
+				</Scripts>
+				<ScrollChild>
+					<SimpleHTML name="BossNotesNote" >
+						<Size>
+							<AbsDimension x="280" y="10"/>
+						</Size>
+						<Scripts>
+							<OnLoad>
+								self:SetHyperlinksEnabled(true)
+								self:SetScript("OnHyperlinkEnter", function (...) BossNotes:OnHyperlinkEnterNote(...) end)
+								self:SetScript("OnHyperlinkLeave", function (...) BossNotes:OnHyperlinkLeaveNote(...) end)
+							</OnLoad>
+							<!--
+							<OnHyperLinkEnter>BossNotes:OnHyperlinkEnterNote(self, link, text)</OnHyperLinkEnter>
+							<OnHyperlinkLeave>BossNotes:OnHyperlinkLeaveNote(self, link, text)</OnHyperlinkLeave>
+							-->
+							<OnHyperlinkClick>BossNotes:OnHyperlinkClickNote(self, link, text, button)</OnHyperlinkClick>
+						</Scripts>
+						<FontString inherits="GameFontHighlightSmall" /> 
+						<FontStringHeader1 inherits="BossNotesFontHeader"/>
+					</SimpleHTML>
+				</ScrollChild>
+			</ScrollFrame>
+			
+			<!-- Buttons -->
+			<Frame name="BossNotesChatDropDown" inherits="UIDropDownMenuTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="148" y="-409" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>UIDropDownMenu_SetWidth(self, 80)</OnLoad>
+				</Scripts>
+			</Frame>
+			<Button name="BossNotesRefreshButton" inherits="UIPanelButtonTemplate">
+				<Size>
+					<AbsDimension x="80" y="22" /> 
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="305" y="-422" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>BossNotes:OnClickRefresh(self)</OnClick> 
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>BossNotes:OnLoadBossNotesFrame(self)</OnLoad>
+			<OnShow>BossNotes:OnShowBossNotesFrame(self)</OnShow>
+			<OnHide>BossNotes:OnHideBossNotesFrame(self)</OnHide>
+		</Scripts>
+ 	</Frame>
+</Ui>

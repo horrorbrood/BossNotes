@@ -1,0 +1,17 @@
+﻿## Interface: 70000
+## Title: Boss Notes [|cffe76f00Abilities|r]
+## Title-deDE: Boss Notes [|cffe76f00Fähigkeiten|r]
+## Title-zhTW: Boss Notes [|cffe76f00技能|r]
+## Title-zhCN: Boss Notes [|cffe76f00技能|r]
+## Notes: Boss Notes module for tracking boss abilities.
+## Notes-deDE: Boss Notes-Modul für das Verfolgen von Boss-Fähigkeiten.
+## Notes-zhTW: Boss Notes 首領技能追蹤模組。
+## Notes-zhCN: Boss Notes 首领技能追踪模块。
+## Author: Bethink
+## SavedVariables: BossNotesAbilitiesDB
+## Dependencies: BossNotes
+## X-Curse-Packaged-Version: 1.6.0.1
+## X-Curse-Project-Name: Boss Notes
+## X-Curse-Project-ID: boss-notes
+## X-Curse-Repository-ID: wow/boss-notes/mainline
+Abilities.lua

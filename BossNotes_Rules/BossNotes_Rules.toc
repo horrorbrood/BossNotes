@@ -1,0 +1,24 @@
+﻿## Interface: 70000
+## Title: Boss Notes [|cffe76f00Rules|r]
+## Title-deDE: Boss Notes [|cffe76f00Regeln|r]
+## Title-zhTW: Boss Notes [|cffe76f00規則|r]
+## Title-zhCN: Boss Notes [|cffe76f00规则|r]
+## Notes: Boss Notes module for rules on encounters.
+## Notes-deDE: Boss Notes-Modul für Regeln zu Begegnungen.
+## Notes-zhTW: Boss Notes 規則觸發模組。
+## Notes-zhCN: Boss Notes 规则触发模块。
+## Author: Bethink
+## SavedVariables: BossNotesRulesDB
+## Dependencies: BossNotes, BossNotes_Abilities, BossNotes_Emotes
+## OptionalDeps: DBM-Core, BigWigs, DXE
+## X-Curse-Packaged-Version: 1.6.0.1
+## X-Curse-Project-Name: Boss Notes
+## X-Curse-Project-ID: boss-notes
+## X-Curse-Repository-ID: wow/boss-notes/mainline
+Rules.lua
+Engine.lua
+RuleEditor.lua
+SimpleDisplay.lua
+DbmDisplay.lua
+BigWigsDisplay.lua
+DxeDisplay.lua

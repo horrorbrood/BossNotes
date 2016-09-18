@@ -1,0 +1,18 @@
+﻿## Interface: 70000
+## Title: Boss Notes [|cffe76f00Personal Notes|r]
+## Title-deDE: Boss Notes [|cffe76f00Persönliche Notizen|r]
+## Title-zhTW: Boss Notes [|cffe76f00私人註記|r]
+## Title-zhCN: Boss Notes [|cffe76f00私人注记|r]
+## Notes: Boss Notes module for managing shareable notes.
+## Notes-deDE: Boss Notes-Modul für das Verwalten von teilbaren Notizen.
+## Notes-zhTW: Boss Notes 私人註記模組。
+## Notes-zhCN: Boss Notes 私人注记模块。
+## Author: Bethink
+## SavedVariables: BossNotesPersonalNotesDB
+## Dependencies: BossNotes
+## X-Curse-Packaged-Version: 1.6.0.1
+## X-Curse-Project-Name: Boss Notes
+## X-Curse-Project-ID: boss-notes
+## X-Curse-Repository-ID: wow/boss-notes/mainline
+PersonalNotes.lua
+PersonalNotesEditor.xml

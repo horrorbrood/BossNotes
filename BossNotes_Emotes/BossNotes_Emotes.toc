@@ -1,0 +1,17 @@
+﻿## Interface: 70000
+## Title: Boss Notes [|cffe76f00Emotes|r]
+## Title-deDE: Boss Notes [|cffe76f00Emotes|r]
+## Title-zhTW: Boss Notes [|cffe76f00表情|r]
+## Title-zhCN: Boss Notes [|cffe76f00表情|r]
+## Notes: Boss Notes module for tracking boss emotes.
+## Notes-deDE: Boss Notes-Modul für das Verfolgen von Boss-Emotes.
+## Notes-zhTW: Boss Notes 首領表情追蹤模組。
+## Notes-zhCN: Boss Notes 首领表情追踪模块。
+## Author: Bethink
+## SavedVariables: BossNotesEmotesDB
+## Dependencies: BossNotes
+## X-Curse-Packaged-Version: 1.6.0.1
+## X-Curse-Project-Name: Boss Notes
+## X-Curse-Project-ID: boss-notes
+## X-Curse-Repository-ID: wow/boss-notes/mainline
+Emotes.lua

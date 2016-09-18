@@ -1,0 +1,515 @@
+Boss Notes Release Notes
+------------------------
+
+* Release 1.2.8 for World of Warcraft 4.3.0 (2011-12-27)
+
+- CHANGE: Adapted to World of Warcraft 4.3.0
+
+- CHANGE: Updated encounter database for patch 4.3 content (End Time,
+Well of Eternity, Hour of Twilight, Dragon Soul)
+
+
+* Release 1.2.7 for World of Warcraft 4.2.2 (2011-09-25)
+
+- CHANGE: Updated tactics for Zan'dalari dungeons and Firelands raid.
+
+
+* Release 1.2.6 for World of Warcraft 4.2.0 (2011-07-09)
+
+- CHANGE: Adapted to World of Warcraft 4.2.0
+
+- CHANGE: Updated encounter database for patch 4.1 content (Zul'Gurub, Zul'Aman).
+
+- CHANGE: Updated encoutner database for patch 4.2 content (Firelands).
+
+- FIX: Removed Doomguard NPC from the Dire Maul instance.
+
+
+* Release 1.2.5 for World of Warcraft 4.1.0 (2011-04-28)
+
+- CHANGE: Adapted to World of Warcraft 4.1.0
+
+- CHANGE: Updated encounter database for patch 4.1 content (Zul'Gurub, Zul'Aman).
+
+
+* Release 1.2.4 for World of Warcraft 4.0.6 (2011-02-11)
+
+- FEATURE: Added Korean translations contributed by decoykang.
+
+- FEATURE: Added heroic difficulty tactics by DrKazza.
+
+- CHANGE: Updated encounter database for Cataclysm content.
+
+- CHANGE: Updated tactics for Cataclysm content.
+
+- FIX: Dungeon and raid difficulty is now properly detected. Some already
+learned abilities may need to be learned again and/or may remain on an
+incorrect difficulty.
+
+
+* Release 1.2.3 for World of Warcraft 4.0.3 (2011-01-03)
+
+- CHANGE: Updated encounter database for Cataclysm content.
+
+- FIX: The LDB text is not updated when the encounter changes while the Boss
+Notes window is closed.
+
+
+* Release 1.2.2 for World of Warcraft 4.0.3 (2010-12-27)
+
+- FIX: Fixed an issue with the rule editor raising a Lua error when using a
+recent AceGUI library.
+
+
+* Release 1.2.1 for World of Warcraft 4.0.3 (2010-12-01)
+
+- CHANGE: Updated encounter database for Cataclysm content.
+
+- CHANGE: Updated tactics database for Cataclysm content.
+
+- FIX: The display of a scroll bar in the Boss Notes main window no longer
+raises a Lua error.
+
+
+* Release 1.2.0 for World of Warcraft 4.0.1 (2010-10-13)
+
+- CHANGE: Merged from Cataclysm development branch
+
+
+* Release 1.2.0 Beta 4 for World of Warcraft 4.0.1 (2010-09-25)
+
+- FEATURE: Added support for copying tactics to the clipboard. Right-click a
+tactics, choose Copy from the context menu, copy the text to the clipboard,
+and paste it in a personal note to customize it.
+
+- FEATURE: Added support for generic chat channels. Boss Notes content can now
+be sent to system channels such as General or custom channels.
+
+- FEATURE: The Rules module can now be configured to manage rules globally per
+account instead of per character.
+
+- FEATURE: A test mode for rules has been added. Type /bn rules fire <name> to
+fire a rule when in combat.
+
+- CHANGE: Updated encounter database for The Deadmines and Shadowfang Keep.
+
+- CHANGE: In the sent to chat menu, the name of the target player is now
+displayed for whispering to that player. If the current target is not a
+player, the whisper option is omitted.
+
+- FIX: The rule editor no longer displays an Okay button in text fields.
+
+- FIX: Inadvertent early line breaks when Boss Notes content was posted in a
+chat have been fixed.
+
+- FIX: Boss Notes Rules no longer attempts to issue raid warnings when in a
+party.
+
+
+* Release 1.2.0 Beta 3 for World of Warcraft 4.0.1 (2010-09-19)
+
+- CHANGE: Updated encounter database for  Lost City of the Tol'vir
+
+- CHANGE: Extended member colorizing to work properly outside of raids, i.e.
+in parties and single-player.
+
+
+* Release 1.2.0 Beta 2 for World of Warcraft 4.0.1 (2010-09-18)
+
+- FEATURE: Added support for colorizing raid member names in personal notes.
+Raid member names written in double curly braces (as in {{name}}) are colorized
+based on whether the player is in raid groups 1-5, 6-8 or not in the raid.
+Based on a patch contributed by Valen of US-Windrunner. Thank you very much!
+
+- CHANGE: Updated encounter database for Grim Batol, Halls of Origination,
+The Stonecore, The Vortex Pinnacle.
+
+
+* Release 1.2.0 Beta 1 for World of Warcraft 4.0.1 (2010-09-11)
+
+- CHANGE: Adapted to World of Warcraft 4.0.1
+
+- CHANGE: Improved instance selection by using submenus to group instances.
+
+
+* Release 1.1.7 for World of Warcraft 3.3.5 (2010-07-11)
+
+- CHANGE: Updated encounter database for The Ruby Sanctum and The Lich King
+ enocunters.
+
+
+* Release 1.1.6 for World of Warcraft 3.3.3 (2010-05-19)
+
+- CHANGE: Updated encounter database for The Ruby Sanctum and the ICC
+encounters Valithria Dreamwalker and The Lich King (heroic).
+
+
+* Release 1.1.5 for World of Warcraft 3.3.2 (2010-03-15)
+
+- CHANGE: Reverted release notes back to text.
+
+- CHANGE: Rules can now be defined in the general category and are active
+in all encounters. In addition, rules defined in an instance category are
+now active for all encounters in that instance.
+
+- FIX: The change of of dungeon difficulty in dynamic instances is now properly
+handled.
+
+
+* Release 1.1.4 for World of Warcraft 3.3.2 (2010-02-15)
+
+- CHANGE: Converted the release notes to HTML.
+
+- CHANGE: Units are now considered "in combat" as soon as they are
+discovered. This is a more reliable definition.
+
+- CHANGE: Updated encounter database for the Lich King encounter.
+
+- FIX: Debuffs are now checked in addition to buffs when evaluating
+aura conditions on units.
+
+- FIX: Player abilities that are removed by NPCs when controling a
+player are no longer associated with those NPCs.
+
+- FIX: The rule editor no longer resets the NPC type to the the first
+NPC in the list when using NPC conditions.
+
+
+* Release 1.1.3 for World of Warcraft 3.3.2 (2010-02-10)
+
+- CHANGE: Updated encounter database for ICC Frostwing Halls and The Frozen
+Throne.
+
+- CHANGE: Updated tactics database.
+
+
+* Release 1.1.2 for World of Warcraft 3.3.0 (2010-01-24)
+
+- FIX: Emote triggers are now working properly.
+
+
+* Release 1.1.1 for World of Warcraft 3.3.0 (2010-01-21)
+
+- FEATURE: Added a minimap icon.
+
+- CHANGE: Updated encounter database of ICC Crisom Halls.
+
+- FIX: Rules containing notification actions with a non-integer collapse
+parameter no longer fail at validation when being broadcast.
+
+- FIX: Added missing optional dependencies to ensure Boss Notes is working
+properly when running disembedded.
+
+
+* Release 1.1.0 for World of Warcraft 3.3.0 (2010-01-09)
+
+- CHANGE: Updated encounter database for ICC Plagueworks.
+
+- FIX: Validation failed for rules with timer actions without a repeat
+interval.
+
+- FIX: In rare event collapsing situations, Boss Notes Rules may show a
+notification or start a timer after an encounter has ended.
+
+- FIX: Raid target icons were not set by raid assistants.
+
+
+* Release 1.1.0 Beta 3 for World of Warcraft 3.3.0 (2010-01-02)
+
+- FEATURE: Added support for showing notes from all characters on the account
+in the Pesonal Notes module.
+
+- CHANGE: Restructured settings to make the relationship of settings to
+Boss Notes modules more clear.
+
+- FIX: Adding a titled note when no default note is set makes the default
+note permanently inaccessible.
+
+- FIX: Incorrect translation in the zhTW locale causes incorrect display and
+disconnects players when using the Abilities module.
+
+
+* Release 1.1.0 Beta 2 for World of Warcraft 3.3.0 (2009-12-28)
+
+- FEATURE: Raid target icons can now be set by applying a suffix
+(target, targettarget) to the event source or destination.
+
+- FEATURE: Timers now support a repeat and a collapse interval.
+
+- FIX: Entry into combat is not detected in some cases.
+
+
+* Release 1.1.0 Beta 1 for World of Warcraft 3.3.0 (2009-12-21)
+
+- FEATURE: Added Rules module, providing support for event-condition-action
+combat rules.
+
+
+* Release 1.0.9 for World of Warcraft 3.3.0 (2009-12-13)
+
+- CHANGE: Updated tactics database for Icecrown dungeons and raids.
+
+- CHANGE: Updated encounter database for The Oculus, The Forge of Souls
+and Pit of Saron.
+
+- CHANGE: When learning NPC to encounter associations, emotes and
+untracked spells no longer trigger new associations.
+
+- FIX: Corrected an issue where removing XML introduced unintended line
+breaks.
+
+- FIX: Unsafe UI escapes are not removed from content when sending to a
+chat channel, preventing players from disconnecting.
+
+
+* Release 1.0.8 for World of Warcraft 3.3.0 (2009-12-10)
+
+- FEATURE: Updated encounter database for Icecrown Citadel and Halls
+of Reflection.
+
+- CHANGE: Adapted to World of Warcraft 3.3.0.
+
+
+* Release 1.0.8 Beta 1 for World of Warcraft 3.2.2 (2009-12-04)
+
+- FEATURE: Added an Emotes module for tracking Boss emotes and yells.
+
+- FEATURE: Added specific tracking for stacking buffs/debuffs to the
+Abilities module.
+
+- CHANGE: Moved Onyxia raid from Classic to Wrath of the Lich King.
+
+- CHANGE: Updated tactics database.
+
+- CHANGE: Added preliminary data for Icecrown dungeons and raids to the
+encounter database.
+
+- CHANGE: Moved NPC learning functionality to BossNotes core.
+
+- CHANGE: Added support for the new GUID layout as of patch 3.3.
+
+- CHANGE: Added a new source key showHyperlinkTooltip that controls
+whether a GameTooltip is shown for hyperlinks in the content.
+
+- CHANGE: Added a new callback OnHyperlinkClick() that is invoked
+when a hyperlink in the content is clicked.
+
+
+* Release 1.0.7 for World of Warcraft 3.2.0 (2009-09-05)
+
+- CHANGE: Updated encounter database (Trial of the Crusader,
+Algalon the Observer.)
+
+- CHANGE: Updated tatctics from DrKazza (Trial of the Crusader).
+
+
+* Release 1.0.6 for World of Warcraft 3.2.0 (2009-08-09)
+
+- CHANGE: Updated encounter database (Lord Jaraxxus,
+Trial of the Champion, Ahn'Kahet: The Old Kingdom).
+
+- CHANGE: Updated tactics from DrKazza (Trial of the Champion,
+Trial of the Crusader).
+
+- FIX: The Abilities module causes a Lua error if NPCs are
+recorded in the general category.
+
+- FIX: Activating the tooltip causes a Lua error if no
+information source is available.
+
+
+* Releaes 1.0.5 for World of Warcraft 3.2.0 (2009-08-05)
+
+- CHANGE: Updated encouter database (The Beasts of Northrend).
+
+- FIX: The instance difficulty detection has been adapted to
+the changes in dungeon and raid difficulty introduced by
+patch 3.2.
+
+
+* Release 1.0.4 for World of Warcraft 3.2.0 (2009-08-05)
+
+- CHANGE: Updated encounter database.
+
+- CHANGE: Adapted to World of Warcraft 3.2.0.
+
+
+* Release 1.0.3 for World of Warcraft 3.1.3 (2009-07-20)
+
+- FEATURE: The display in the abilities category now shows the
+usage of a spell (cast, buff, debuff).
+
+- CHANGE: The display in the abilities category now only shows
+abilities matching the current instance difficulty (normal, heroic).
+Outside of instances, the instance difficulty setting on the
+player portrait determines the abilities shown.
+
+- CHANGE: The NPC learning mode now ignores some well-known
+player creations, such as mirror images, when they
+intermittently appear as outsiders to the raid.
+
+- CHANGE: Updated encounter database (Ulduar, Trial of the Champion,
+Trial of the Cursader, some classic dungeons.)
+
+- FIX: NPC abilities are sometimes shown on player characters.
+
+- FIX: The personal notes editor inadvertently limits notes to
+255 characters.
+
+
+* Release 1.0.2 for World of Warcraft 3.1.2 (2009-06-02)
+
+- FEATURE: Added an option to enable or disable the printing of
+the header to the chat.
+
+- FEATURE: Added an option to show an abilities summary in the
+NPC tooltip.
+
+- FEATURE: Added contributed zhTW locale.
+
+- CHANGE: Added additional events to abilities recording.
+
+- CHANGE: Personal notes can now grow up to 2000 bytes.
+
+- CHANGE: Updated encounter database.
+
+- CHANGE: Updated tactics database.
+
+
+* Release 1.0.1 for World of Warcraft 3.1.1 (2009-05-01)
+
+- CHANGE: Updated the encounter database (Algalon the Observer,
+plus some classic stuff.)
+
+- CHANGE: The abilities information now shows the NPCs
+sorted by name. For encounters, the main NPC of the
+ecnounter is always first.
+
+- FIX: The hyperlink tooltip is now positioned properly when
+an information is scrolled.
+
+
+* Release 1.0.0 for World of Warcraft 3.1.1 (2009-04-24)
+
+- CHANGE: When sending notes to a chat channel, a header is no
+longer sent if the note is from the General category.
+
+- CHANGE: Updated encounter database. The database now contains
+all instances.
+
+- CHANGE: Updated tactics database.
+
+- FIX: "Type 5" NPCs are now properly processesd.
+
+
+* Release 0.9.7 Beta for World of Warcraft 3.0.9 (2009-04-09)
+
+- CHANGE: Updated encounter database.
+
+- FIX: Error during startup due to missing library.
+
+
+* Release 0.9.6 Beta for World of Warcraft 3.0.9 (2009-04-07)
+
+- CHANGE: Updated encounter database.
+
+- FIX: Neutral NPCs were not recorded.
+
+- FIX: Fixed an error when printing messages to the chat.
+
+- FIX: Fixed an error during startup.
+
+
+* Release 0.9.5 Beta for World of Warcraft 3.0.9 (2009-04-05)
+
+- FEATURE: Extended encounter database for Ulduar (with the exceptions
+of Yogg-Saron and Algalon), and all TBC and Classic raids.
+
+- FEATURE: Added German core localization.
+
+- FEATURE: Added support for pasting links into the Boss Notes
+editor.
+
+- FEATURE: Added support for syndication in parties.
+
+- FEATURE: Added support for trash abilities.
+
+- FEATURE: Added learning mode to automatically associate NPCs with
+instances and encounters. This can be used when the encounter database
+is incomplete.
+
+- FEATURE: Added optional tags to sources. Tag are shown to the right
+of the title and are surrounded by round brackets.
+
+- CHANGE: Removed the generic sources cache, reducing the memory
+consumption of the add-on. Syndicated notes are still cached in
+the Personal Notes module. They are refreshed on demand or if the
+TTL has expired.
+
+- CHANGE: The slash command "notes" has been renamed to "toggle".
+
+- CHANGE: Reworked the line breaking code to discount UI escape
+sequences.
+
+- CHANGE: When editing a non-private note for the first time,
+a confirmation popup indicating that non-private notes are
+by default shared within the guild, party and raid is now
+shown.
+
+- CHANGE: Updated tactics database.
+
+
+* Release 0.9.4 Beta for World of Warcraft 3.0.9 (2009-03-24)
+
+- FEATURE: Added support for multiple personal notes per category.
+Also, private notes are now supported. Private notes are not
+syndicated.
+
+- CHANGE: Refactored add-on to a fully modular design. All notes
+are now contributed by providers. Each provider may reside in an
+add-on of its own. Bundled providers include Abilities, Personal Notes
+and Tactics.
+
+- FIX: Fixed recording of abilities to support abilities used in
+both normal and heroic modes. Also fixed an issue with detecting
+the dungeon difficulty.
+
+
+* Releaes 0.9.3 Beta for World of Warcraft 3.0.9 (2008-03-17)
+
+- FEATURE: Added support for recording and displaying boss abilities.
+
+- FEATURE: Added support for boss notes in HTML.
+
+- FEATURE: Added full import of the tactics collection maintained
+by DrKazza. The collection is still work in progress.
+
+- FEATURE: Completed core encounter database for WOTLK raids and
+dungeons.
+
+- FEATURE: Added chinese translation provided by wowui.cn.
+
+- CHANGE: Moved the notes editor to a popup.
+
+
+* Release 0.9.2 Beta for World of Warcraft 3.0.9 (2009-03-14)
+
+- FEATURE: Added support for printing boss notes to chats, such
+as raid chat, party chat, etc.
+
+- FEATURE: Added support for modular, pre-compiled notes collections.
+Added some tactics notes provided by DrKazza.
+
+- FEATURE: Added support for dungeons in addition to raids.
+
+- FEATURE: Made Boss Notes fully localizable.
+
+
+* Release 0.9.1 Beta for World of Warcraft 3.0.9 (2009-03-09)
+
+- FIX: Fixed some issues related to the packaging of the add-on.
+
+
+* Release 0.9.0 Beta for World of Warcraft 3.0.9 (2009-03-09)
+
+- Initial release

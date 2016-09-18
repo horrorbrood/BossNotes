@@ -1,0 +1,23 @@
+﻿## Interface: 70000
+## Title: Boss Notes
+## Notes: Provides shareable notes and other information for your guild, party and raid community.
+## Notes-deDE: Bietet teilbare Notizen und weitere Informationen für deine Gilden-, Gruppen- und Raid-Community an.
+## Notes-zhTW: 提供可共享的註記和其他信息給你的公會，隊伍和團隊成員。
+## Notes-zhCN: 提供可共享的注记和其它信息给你的公会，队伍和团队成员。
+## Author: Bethink
+## Updated for MoP: DrKazza
+## Updated for WoD: LintyDruid
+## Version: 1.6.1.0
+## SavedVariables: BossNotesDB
+## OptionalDeps: Ace3, LibSchema-1.0, LibDBIcon-1.0
+## X-Curse-Packaged-Version: 1.6.0.1
+## X-Curse-Project-Name: Boss Notes
+## X-Curse-Project-ID: boss-notes
+## X-Curse-Repository-ID: wow/boss-notes/mainline
+embeds.xml
+Locales\Locales.xml
+BossNotes.lua
+BossNotesFrame.xml
+Data.lua
+Encounter.lua
+Bindings.xml
