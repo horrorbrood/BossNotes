@@ -286,6 +286,124 @@ BOSS_NOTES_ENCOUNTERS = {
 		},
 	},
 	{
+		-- LegionRaid - Added by Horrorbrood
+		instanceSetId = "LegionRaid",
+		raid = true,
+		instances = {
+			{
+				--Emerald Nightmare
+				instanceId = "LEN",
+				npcIds = { },
+				encounters = {
+					{
+						-- "Nythendra"
+						encounterId = 103160,
+						npcIds = {}
+					},
+					{
+						-- "Il'gynoth"
+						encounterId = 105393,
+						npcIds = {}
+					},
+					{
+						-- "Elerethe Renferal"
+						encounterId = 111000,
+						npcIds = {}
+					},
+					{
+						-- "Ursoc"
+						encounterId = 100497,
+						npcIds = {}
+					},
+					{
+						-- "Ysondre"
+						encounterId = 102679,
+						npcIds = {}
+					},
+					{
+						-- "Lethon"-
+						encounterId = 102682,
+						npcIds = {}
+					},
+						{
+						-- "Taerar"
+						encounterId = 102681,
+						npcIds = {}
+					},
+					{
+						-- "Emeriss"
+						encounterId = 102683,
+						npcIds = {}
+					},
+					{
+						-- "Cenarius"
+						encounterId = 113534,
+						npcIds = {}
+					},
+					{
+						-- "Xavius"-
+						encounterId = 103769,
+						npcIds = {}
+					},
+				},
+			},
+			{
+				--Outdoor
+				instanceId = "LO",
+				npcIds = { },
+				encounters = {
+					{
+						-- "Ana-Mouz"
+						encounterId = 109943
+						
+					},
+					{
+						-- "Calamir"
+						encounterId = 109331
+						
+					},
+					
+					{
+						-- "Drugon"
+						encounterId = 110378
+					},
+					{
+						-- "Flotsam"
+						encounterId = 99929
+					},
+					{
+						-- "Humongris"
+						encounterId = 108879
+					},
+					{
+						-- "Levantus"
+						encounterId = 108829
+					},
+					{
+						-- "Na'zak the Fiend"
+						encounterId = 110321
+					},
+					{
+						-- "Nithogg"
+						encounterId = 107544
+					},
+					{
+						-- "Shar'thos"
+						encounterId = 108678
+					},
+					{
+						-- "The Soultakers"
+						encounterId = 106981
+					},
+					{
+						--"Withered J'im"
+						encounterId = 112350
+					},						
+				},
+			},
+		},
+	},
+	{
 		-- Draenor Dungeons - Added by Linty Druid
 		instanceSetId = "DraenorDungeon",
 		raid = false,
@@ -509,124 +627,6 @@ BOSS_NOTES_ENCOUNTERS = {
 					},
 					
 					
-				},
-			},
-		},
-	},
-		{
-		-- LegionRaid - Added by Horrorbrood
-		instanceSetId = "LegionRaid",
-		raid = true,
-		instances = {
-			{
-				--HighMaul
-				instanceId = "LEN",
-				npcIds = { },
-				encounters = {
-					{
-						-- "Nythendra"
-						encounterId = 103160,
-						npcIds = {}
-					},
-					{
-						-- "Il'gynoth"
-						encounterId = 105393,
-						npcIds = {}
-					},
-					{
-						-- "Elerethe Renferal"
-						encounterId = 111000,
-						npcIds = {}
-					},
-					{
-						-- "Ursoc"
-						encounterId = 100497,
-						npcIds = {}
-					},
-					{
-						-- "Ysondre"
-						encounterId = 102679,
-						npcIds = {}
-					},
-					{
-						-- "Lethon"-
-						encounterId = 102682,
-						npcIds = {}
-					},
-						{
-						-- "Taerar"
-						encounterId = 102681,
-						npcIds = {}
-					},
-					{
-						-- "Emeriss"
-						encounterId = 102683,
-						npcIds = {}
-					},
-					{
-						-- "Cenarius"
-						encounterId = 113534,
-						npcIds = {}
-					},
-					{
-						-- "Xavius"-
-						encounterId = 103769,
-						npcIds = {}
-					},
-				},
-			},
-			{
-				--Outdoor
-				instanceId = "LO",
-				npcIds = { },
-				encounters = {
-					{
-						-- "Ana-Mouz"
-						encounterId = 109943
-						L["encounter:109943"] = 
-					},
-					{
-						-- "Calamir"
-						encounterId = 109331
-						L["encounter:"] = 
-					},
-					
-					{
-						-- "Drugon"
-						encounterId = 110378
-					},
-					{
-						-- "Flotsam"
-						encounterId = 99929
-					},
-					{
-						-- "Humongris"
-						encounterId = 108879
-					},
-					{
-						-- "Levantus"
-						encounterId = 108829
-					},
-					{
-						-- "Na'zak the Fiend"
-						encounterId = 110321
-					},
-					{
-						-- "Nithogg"
-						encounterId = 107544
-					},
-					{
-						-- "Shar'thos"
-						encounterId = 108678
-					},
-					{
-						-- "The Soultakers"
-						encounterId = 106981
-					},
-					{
-						--"Withered J'im"
-						encounterId = 112350
-					},						
 				},
 			},
 		},
