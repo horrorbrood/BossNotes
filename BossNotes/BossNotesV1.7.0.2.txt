@@ -1,0 +1,3 @@
+BossNotesV1.7.0.2 
+added Emerald Raid Bosses 
+added outdoor bosses
