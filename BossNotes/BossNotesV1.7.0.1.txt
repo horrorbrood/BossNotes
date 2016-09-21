@@ -1,0 +1,5 @@
+BossNotesV1.7.0.1 
+#fixed learning abilities 
+##todo
+#add Emerald Raid Bosses
+#fix emotes

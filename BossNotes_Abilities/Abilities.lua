@@ -413,7 +413,9 @@ end
 function BossNotesAbilities:OnTooltipSetUnit (gameTooltip)
 	if self.db.global.tooltipInfo then 
 		local npcId = BossNotes:GetNpcId(UnitGUID("mouseover"))
+		
 		if npcId then
+		
 			local npc = self.db.global.npcs[npcId]
 			if npc then
 				-- Get current dungeon difficulty bit
@@ -498,6 +500,7 @@ function BossNotesAbilities:MigrateDatabase (targetVersion)
 		version = 3
 		self.db.global.databaseVersion = version
 	end
+	
 	
 	-- Set to target version
 	self.db.global.databaseVersion = version

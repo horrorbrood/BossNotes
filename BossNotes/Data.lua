@@ -359,17 +359,25 @@ end
 
 -- Returns the NPC ID of a GUID
 function BossNotes:GetNpcId (guid)
+
+if (guid == nil) then
+return
+else
+local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-", guid)
 	-- Check GUID
 	if not guid then
 		return nil
 	end
 	
 	-- Check unit type
-	local unitType = string.sub(guid, 5, 5)
-	if unitType ~= "3" and unitType ~= "5" then
-		return nil
-	end
+	local unitType = type
+	--if unitType ~= "Pet" and unitType ~= "GameObject" then
+		--return nil
+	--end
+	local guid = npc_id
 	
+
 	-- Check unit NPC ID
-	return tonumber(string.sub(guid, 6, 10), 16)
+	return npc_id
+	end
 end
