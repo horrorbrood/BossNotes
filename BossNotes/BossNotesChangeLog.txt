@@ -1,0 +1,2 @@
+BossNotesV1.7.4
+Fixed Lua errors

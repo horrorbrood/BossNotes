@@ -1,2 +1,0 @@
-BossNotesV1.7.0.3 
-fixed errors
