@@ -52,7 +52,30 @@ local FILTERED_NPC_IDS = {
 	[35642] = true, -- Jeeves
 	[46157] = true, -- Hand of Gul'dan
 	[46954] = true, -- Shadowy Apparition
-	[47244] = true  -- Mirror Image
+	[47244] = true,  -- Mirror Image
+	[100943] = true,	--Earthen Shield Totem
+	[100820] = true,	--sprit wolf
+	[55659] = true,	--wild imp
+	[97369] = true,	--magma totem
+	[78001] = true,	--cloudburst totem
+	[104818] = true,	--Ancestral Protection Totem
+	[100943] = true,	--Earthen Sheild
+	[53006] = true,	--Spirit Link totem
+	[59764] = true,	--Healing Tide Totem
+	[95255] = true,	--Earthquake Totem
+	[60561] = true,	--Earthgrab Totem
+	[91245] = true,	--Lightning Surge Totem
+	[100099] = true,	--Voodoo Totem
+	[97285] = true,	--wind rush totem
+	[3527] = true,	--Healing Stream
+	[102392] = true,	--Resonace Totem
+	[106317] = true,	--Storm totem
+	[106319] = true,	--Ember Totem
+	[106321] = true,	--tailwind totem
+	[113845] = true,	--totem mastery
+	[78116] = true, --water elemental
+	[61146] = true,--black ox
+	[63508] = true--Xuen
 }
 
 -- An empty table
@@ -371,9 +394,9 @@ local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit
 	
 	-- Check unit type
 	local unitType = type
-	--if unitType ~= "Pet" and unitType ~= "GameObject" then
-		--return nil
-	--end
+	if unitType ~= "Creature" and unitType ~= "Pet" then
+		return nil
+	end
 	local guid = npc_id
 	
 

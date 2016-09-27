@@ -297,7 +297,7 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "Nythendra"
-						encounterId = 103160,
+						encounterId = 102672,
 						npcIds = {}
 					},
 					{
@@ -307,7 +307,7 @@ BOSS_NOTES_ENCOUNTERS = {
 					},
 					{
 						-- "Elerethe Renferal"
-						encounterId = 111000,
+						encounterId = 106087,
 						npcIds = {}
 					},
 					{

@@ -1,2 +1,2 @@
-BossNotesV1.7.4
-Fixed Lua errors
+BossNotesV1.7.0.5
+Fixed Lua errors, added some npc to ignore, corrected boss ids. Please delete BossNotes lua files in the saved variables in your WTF folder wtf/[accountname]/SavedVariables/
