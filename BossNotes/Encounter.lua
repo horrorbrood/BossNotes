@@ -36,20 +36,24 @@ BOSS_NOTES_ENCOUNTERS = {
 					
 					{
 						-- "Lady Hatecoil"
-						encounterId = 91789
+						encounterId = 91789,
+						npcIds = {}
 					},
 					{
 						-- "Serpentrix"
-						encounterId = 91808
+						encounterId = 91808,
+						npcIds = {}
 					},
 					
 					{
 						-- "King Deepbeard"
-						encounterId = 91797
+						encounterId = 91797,
+						npcIds = {}
 					},
 					{
 						-- "Wrath Of Azshara"
-						encounterId = 96028
+						encounterId = 96028,
+						npcIds = {}
 					},
 				},
 			},	
@@ -60,46 +64,55 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "Hymdall"
-						encounterId = 94960
+						encounterId = 94960,
+						npcIds = {}
 					},
 					{
 						-- "Hyrja"
-						encounterId = 96646
+						encounterId = 96646,
+						npcIds = {}
 					},
 					{
 						-- "Fenryr"
-						encounterId = 99868
+						encounterId = 99868,
+						npcIds = {}
 					},
 					{
 						-- "God-King Skovald"
-						encounterId = 97226
+						encounterId = 97226,
+						npcIds = {}
 					},
 					{
 						-- "Odyn"
-						encounterId = 98196
+						encounterId = 98196,
+						npcIds = {}
 					},
 				},
 			},
 			{
 				--Neltharions Lair
 				instanceId = "LNL",
-				npcIds = {91003, 97827, 91005, 99460},
+				npcIds = {91003, 91004, 91005, 91007},
 				encounters = {
 					{
 						-- "Rokmora"
-						encounterId = 91003
+						encounterId = 91003,
+						npcIds = {91003}
 					},
 					{
 						-- "Ularogg Cragshaper"
-						encounterId = 97827
+						encounterId = 91004,
+						npcIds = {91004}
 					},
 					{
 						-- "Naraxas"
-						encounterId = 91005
+						encounterId = 91005,
+						npcIds = {91005}
 					},
 					{
 						-- "Dargul the Underking"
-						encounterId = 99460
+						encounterId = 91007,
+						npcIds = {91007}
 					},
 				},
 			},
@@ -110,59 +123,81 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "Archdruid Glaidalis"
-						encounterId = 96512
+						encounterId = 96512,
+						npcIds = {96512}
 					},
 					{
 						-- "Oakheart"
-						encounterId = 103344
+						encounterId = 103344,
+						npcIds = {103344}
 					},
 					{
 						-- "Dresaron"
-						encounterId = 99200
+						encounterId = 99200,
+						npcIds = {99200}
 					},
 					
 					{
 						-- "Shade of Xavius"
-						encounterId = 101403
+						encounterId = 101403,
+						npcIds = {101403}
 					},
 				},
 			},
 			{
 				--Violet Hold
 				instanceId = "LVH",
-				npcIds = {102618, 102616, 102615, 102619, 102617, 102387, 102614, 106373},
+				npcIds = {102618, 102616, 102615, 101951, 102617, 102387, 102614, 
+				112742, 102302, 102158, 101994, 103609, 102380, 112733, 102376, 102368, 
+				102372, 101950, 102400, 102434, 103561, 102370, 
+				102397, 112732, 30837, 102373, 102335, 101995, 102282, 102398, 
+				112738, 103450, 103312, 102446},
 				encounters = {
 					{
 						-- "MindFlayer Kaahrj"
-						encounterId = 102618
+						encounterId = 102618,
+						npcIds = {102618}
 					},
 					{
 						-- "Millificent Manastorm"
-						encounterId = 102616
+						encounterId = 101976,
+						npcIds = {101976}
 					},
 					{
 						-- "Festerface"
-						encounterId = 102615
+						encounterId = 102615,
+						npcIds = {102615}
 					},
 					{
 						-- "Shivermaw"
-						encounterId = 102619
+						encounterId = 101951,
+						npcIds = {101951}
 					},
 					{
 						-- "Anub'esset"
-						encounterId = 102617
+						encounterId = 102617,
+						npcIds = {102617}
 					},
 					{
 						-- "Sael'orn"
-						encounterId = 102387
+						encounterId = 102387,
+						npcIds = {102387}
+					},
+					{
+						-- "Lord Malgath"
+						encounterId = 102282,
+						npcIds = {102282}
 					},
 					{
 						-- "Blood-Princess Thal'ena"
-						encounterId = 102614
+						encounterId = 102614,
+						npcIds = {102614}
 					},
+				
 					{
 						-- "Fel Lord Betrug"
-						encounterId = 106373
+						encounterId = 102446,
+						npcIds = {102446}
 					},
 				},
 			},
@@ -173,19 +208,23 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "The Amalgam Of Souls"
-						encounterId = 98542
+						encounterId = 98542,
+						npcIds = {98542}
 					},
 					{
 						-- "Illysanna Ravencrest"
-						encounterId = 98696
+						encounterId = 98696,
+						npcIds = {98696}
 					},
 					{
 						-- "Smashspite the Hateful"
-						encounterId = 98949
+						encounterId = 98949,
+						npcIds = {98949}
 					},
 					{
 						-- "Lord Kur'talos Ravencrest"
-						encounterId = 94923
+						encounterId = 94923,
+						npcIds = {94923}
 					},
 				},
 			},
@@ -196,15 +235,18 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "Ymiron, the Fallen King"
-						encounterId = 96756
+						encounterId = 96756,
+						npcIds = {96756}
 					},
 					{
 						-- "Harbaron"
-						encounterId = 96754
+						encounterId = 96754,
+						npcIds = {96754}
 					},
 					{
 						-- "Helya"
-						encounterId = 96759
+						encounterId = 96759,
+						npcIds = {96759}
 					},
 
 				},
@@ -216,23 +258,28 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "Tirathon Saltheril"
-						encounterId = 99198
+						encounterId = 99198,
+						npcIds = {99198}
 					},
 					{
 						-- "Ash'golm"
-						encounterId = 95886
+						encounterId = 95886,
+						npcIds = {95886}
 					},
 					{
 						-- "Glazer"
-						encounterId = 99865
+						encounterId = 99865,
+						npcIds = {99865}
 					},
 					{
 						-- "Cordana Felsong"
-						encounterId = 95888
+						encounterId = 95888,
+						npcIds = {95888}
 					},
 					{
 						-- "Inqisitor Tormentorum"
-						encounterId = 96015
+						encounterId = 96015,
+						npcIds = {96015}
 					},
 				},
 			},
@@ -243,23 +290,28 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "Ivanyr"
-						encounterId = 98203
+						encounterId = 98203,
+						npcIds = {98203}
 					},
 					{
 						-- "Corstilax"
-						encounterId = 98205
+						encounterId = 98205,
+						npcIds = {98205}
 					},
 					{
 						-- "General Xakal"
-						encounterId = 98206
+						encounterId = 98206,
+						npcIds = {98206}
 					},
 					{
 						-- "Nal'tira"
-						encounterId = 98207
+						encounterId = 98207,
+						npcIds = {98207}
 					},
 					{
 						-- "Advisor Vandros"
-						encounterId = 98208
+						encounterId = 98208,
+						npcIds = {98208}
 					},
 				},
 			},
@@ -270,15 +322,18 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "Patrol Captain Gerdo"
-						encounterId = 104215
+						encounterId = 104215,
+						npcIds = {104215}
 					},
 					{
 						-- "Talixae Flamewreath"
-						encounterId = 104217
+						encounterId = 104217,
+						npcIds = {104217}
 					},
 					{
 						-- "Advisor Melandrus"
-						encounterId = 106576
+						encounterId = 106576,
+						npcIds = {106576}
 					},
 
 				},
@@ -298,52 +353,52 @@ BOSS_NOTES_ENCOUNTERS = {
 					{
 						-- "Nythendra"
 						encounterId = 102672,
-						npcIds = {}
+						npcIds = {102672}
 					},
 					{
 						-- "Il'gynoth"
 						encounterId = 105393,
-						npcIds = {}
+						npcIds = {105393}
 					},
 					{
 						-- "Elerethe Renferal"
 						encounterId = 106087,
-						npcIds = {}
+						npcIds = {106087}
 					},
 					{
 						-- "Ursoc"
 						encounterId = 100497,
-						npcIds = {}
+						npcIds = {100497}
 					},
 					{
 						-- "Ysondre"
 						encounterId = 102679,
-						npcIds = {}
+						npcIds = {102679}
 					},
 					{
 						-- "Lethon"-
 						encounterId = 102682,
-						npcIds = {}
+						npcIds = {102682}
 					},
 						{
 						-- "Taerar"
 						encounterId = 102681,
-						npcIds = {}
+						npcIds = {102681}
 					},
 					{
 						-- "Emeriss"
 						encounterId = 102683,
-						npcIds = {}
+						npcIds = {102683}
 					},
 					{
 						-- "Cenarius"
 						encounterId = 113534,
-						npcIds = {}
+						npcIds = {113534}
 					},
 					{
 						-- "Xavius"-
 						encounterId = 103769,
-						npcIds = {}
+						npcIds = {103769}
 					},
 				},
 			},
@@ -354,50 +409,61 @@ BOSS_NOTES_ENCOUNTERS = {
 				encounters = {
 					{
 						-- "Ana-Mouz"
-						encounterId = 109943
+						encounterId = 109943,
+						npcIds = {109943}
 						
 					},
 					{
 						-- "Calamir"
-						encounterId = 109331
+						encounterId = 109331,
+						npcIds = {109331}
 						
 					},
 					
 					{
 						-- "Drugon"
-						encounterId = 110378
+						encounterId = 110378,
+						npcIds = {110378}
 					},
 					{
 						-- "Flotsam"
-						encounterId = 99929
+						encounterId = 99929,
+						npcIds = {109943}
 					},
 					{
 						-- "Humongris"
-						encounterId = 108879
+						encounterId = 108879,
+						npcIds = {108879}
 					},
 					{
 						-- "Levantus"
-						encounterId = 108829
+						encounterId = 108829,
+						npcIds = {108829}
 					},
 					{
 						-- "Na'zak the Fiend"
-						encounterId = 110321
+						encounterId = 110321,
+						npcIds = {110321}
 					},
 					{
 						-- "Nithogg"
-						encounterId = 107544
+						encounterId = 107544,
+						npcIds = {107544}
 					},
 					{
 						-- "Shar'thos"
-						encounterId = 108678
+						encounterId = 108678,
+						npcIds = {108678}
 					},
 					{
 						-- "The Soultakers"
-						encounterId = 106981
+						encounterId = 106981,
+						npcIds = {106981}
 					},
 					{
 						--"Withered J'im"
-						encounterId = 112350
+						encounterId = 112350,
+						npcIds = {112350}
 					},						
 				},
 			},

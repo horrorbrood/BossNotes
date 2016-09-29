@@ -74,8 +74,11 @@ local FILTERED_NPC_IDS = {
 	[106321] = true,	--tailwind totem
 	[113845] = true,	--totem mastery
 	[78116] = true, --water elemental
-	[61146] = true,--black ox
-	[63508] = true--Xuen
+	[61146] = true, --black ox
+	[63508] = true, --Xuen
+	[100820] = true, --"Spirit Wolf"
+	[416] = true --"Imp"
+	
 }
 
 -- An empty table

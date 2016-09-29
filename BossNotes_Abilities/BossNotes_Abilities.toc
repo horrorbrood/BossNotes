@@ -8,9 +8,10 @@
 ## Notes-zhTW: Boss Notes 首領技能追蹤模組。
 ## Notes-zhCN: Boss Notes 首领技能追踪模块。
 ## Author: Bethink
+## Updated for Legion: Horrorbrood
 ## SavedVariables: BossNotesAbilitiesDB
 ## Dependencies: BossNotes
-## X-Curse-Packaged-Version: 1.6.0.1
+## X-Curse-Packaged-Version: 1.7.0.6
 ## X-Curse-Project-Name: Boss Notes
 ## X-Curse-Project-ID: boss-notes
 ## X-Curse-Repository-ID: wow/boss-notes/mainline
