@@ -1,5 +1,28 @@
-BossNotesV1.7.0.6
+== BossNotesV1.7.07 ==
+fixed lua error, and added trash ids for the arcway
+
+== BossNotesV1.7.0.6 ==
 Fixed Emote tracking, corrected some npc ids, and ignored some npc
 
-BossNotesV1.7.0.5
+== BossNotesV1.7.0.5 ==
 Fixed Lua errors, added some npc to ignore, corrected boss ids. Please delete BossNotes lua files in the saved variables in your WTF folder wtf/[accountname]/SavedVariables/
+
+
+== 1.7.0.4 ==
+Fixed Errors on load 
+thanks elohel-Madoran for report!
+
+
+== 1.7.0.3 ==
+fixed errors onloading
+
+== 1.7.0.2 ==
+added Emerald Raid Bosses 
+added outdoor bosses
+
+== 1.7.0.1 ==
+fixed learning abilities 
+
+
+== 1.7.0.0 ==
+Added Legion dungeons Release. Some Dungeons pending tactics. Please Report any errors

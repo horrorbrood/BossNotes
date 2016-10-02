@@ -238,7 +238,7 @@ function BossNotesEmotes:HandleEmote (message, msg, unitName)
 			return "%p"
 		end
 	end)
-	print(text)
+	
 	if count > 1 then
 		-- Do not process texts with multiple player names
 		return

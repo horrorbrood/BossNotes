@@ -27,57 +27,57 @@ local DEFAULT_COLOR = { r = 0.77,  g = 0.64, b = 0.0 }
 
 -- Filtered NPCs
 local FILTERED_NPC_IDS = {
-	[510] = true,   -- Water Elemental
-	[2523] = true,  -- Searing Totem
-	[2630] = true,  -- Earthbind Totem
-	[5929] = true,  -- Magma Totem
-	[5950] = true,  -- Flametongue Totem
-	[15438] = true, -- Greater Fire Elemental
-	[15439] = true, -- Fire Elemental Totem
-	[19668] = true, -- Shadowfiend
-	[24207] = true, -- Army of the Dead Ghoul
-	[26125] = true, -- Risen Ghoul
-	[27829] = true, -- Ebon Gargoyle
-	[27893] = true, -- Rune Weapon
-	[28017] = true, -- Bloodworm
-	[28306] = true, -- Anti-Magic Zone
-	[29264] = true, -- Spirit Wolf
-	[29998] = true, -- Desecrated Ground V
-	[31165] = true, -- Searing Totem X
-	[31185] = true, -- Healing Stream Totem IX
-	[31216] = true, -- Mirror Image
-	[31167] = true, -- Magma Totem VII
-	[32775] = true, -- Fire Nova Totem IX
-	[33753] = true, -- Desecrated Ground IV
-	[35642] = true, -- Jeeves
-	[46157] = true, -- Hand of Gul'dan
-	[46954] = true, -- Shadowy Apparition
-	[47244] = true,  -- Mirror Image
-	[100943] = true,	--Earthen Shield Totem
-	[100820] = true,	--sprit wolf
-	[55659] = true,	--wild imp
-	[97369] = true,	--magma totem
-	[78001] = true,	--cloudburst totem
-	[104818] = true,	--Ancestral Protection Totem
-	[100943] = true,	--Earthen Sheild
-	[53006] = true,	--Spirit Link totem
-	[59764] = true,	--Healing Tide Totem
-	[95255] = true,	--Earthquake Totem
-	[60561] = true,	--Earthgrab Totem
-	[91245] = true,	--Lightning Surge Totem
-	[100099] = true,	--Voodoo Totem
-	[97285] = true,	--wind rush totem
-	[3527] = true,	--Healing Stream
-	[102392] = true,	--Resonace Totem
-	[106317] = true,	--Storm totem
-	[106319] = true,	--Ember Totem
-	[106321] = true,	--tailwind totem
-	[113845] = true,	--totem mastery
-	[78116] = true, --water elemental
-	[61146] = true, --black ox
-	[63508] = true, --Xuen
-	[100820] = true, --"Spirit Wolf"
-	[416] = true --"Imp"
+	[510],   -- Water Elemental
+	[2523],  -- Searing Totem
+	[2630],  -- Earthbind Totem
+	[5929],  -- Magma Totem
+	[5950],  -- Flametongue Totem
+	[15438], -- Greater Fire Elemental
+	[15439], -- Fire Elemental Totem
+	[19668], -- Shadowfiend
+	[24207], -- Army of the Dead Ghoul
+	[26125], -- Risen Ghoul
+	[27829], -- Ebon Gargoyle
+	[27893], -- Rune Weapon
+	[28017], -- Bloodworm
+	[28306], -- Anti-Magic Zone
+	[29264], -- Spirit Wolf
+	[29998], -- Desecrated Ground V
+	[31165], -- Searing Totem X
+	[31185], -- Healing Stream Totem IX
+	[31216], -- Mirror Image
+	[31167], -- Magma Totem VII
+	[32775], -- Fire Nova Totem IX
+	[33753], -- Desecrated Ground IV
+	[35642], -- Jeeves
+	[46157], -- Hand of Gul'dan
+	[46954], -- Shadowy Apparition
+	[47244],  -- Mirror Image
+	[100943],	--Earthen Shield Totem
+	[100820],	--sprit wolf
+	[55659],	--wild imp
+	[97369],	--magma totem
+	[78001],	--cloudburst totem
+	[104818],	--Ancestral Protection Totem
+	[100943],	--Earthen Sheild
+	[53006],	--Spirit Link totem
+	[59764],	--Healing Tide Totem
+	[95255],	--Earthquake Totem
+	[60561],	--Earthgrab Totem
+	[91245],	--Lightning Surge Totem
+	[100099],	--Voodoo Totem
+	[97285],	--wind rush totem
+	[3527],	--Healing Stream
+	[102392],	--Resonace Totem
+	[106317],	--Storm totem
+	[106319],	--Ember Totem
+	[106321],	--tailwind totem
+	[113845],	--totem mastery
+	[78116], --water elemental
+	[61146], --black ox
+	[63508], --Xuen
+	[100820], --"Spirit Wolf"
+	[416] --"Imp"
 	
 }
 
