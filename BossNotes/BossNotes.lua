@@ -17,7 +17,6 @@ BossNotes = LibStub("AceAddon-3.0"):NewAddon("BossNotes",
 	"AceTimer-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("BossNotes")
 local icon = LibStub("LibDBIcon-1.0")
-
 	
 ----------------------------------------------------------------------
 -- Constants
@@ -228,6 +227,7 @@ end
 -- Prints a message
 function BossNotes:Print (message)
 	DEFAULT_CHAT_FRAME:AddMessage("|cffe76f00" .. L["BOSS_NOTES"] .. ":|r " .. message)
+	
 end
 
 -- Removes HTML from a string.

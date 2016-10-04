@@ -16,6 +16,8 @@ BossNotesEmotes = LibStub("AceAddon-3.0"):NewAddon("BossNotesEmotes",
 local L = LibStub("AceLocale-3.0"):GetLocale("BossNotes")
 
 
+
+
 ----------------------------------------------------------------------
 -- Constants
 
@@ -70,6 +72,7 @@ function BossNotesEmotes:OnEnable ()
 	self:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
 	self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	self:RegisterEvent("GROUP_ROSTER_UPDATE")
+	
 end
 
 -- Handles the disabling of this add-on
@@ -318,12 +321,15 @@ function BossNotesEmotes:GROUP_ROSTER_UPDATE (message)
 		self.members[UnitName("player")] = true
 		for i = 1, MAX_PARTY_MEMBERS do
 			local member = UnitName("party" .. i)
+			
 			if member then
 				self.members[member] = true
 			end
 		end
 	end
 end
+
+
 
 
 ----------------------------------------------------------------------

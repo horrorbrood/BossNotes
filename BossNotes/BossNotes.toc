@@ -4,14 +4,14 @@
 ## Notes-deDE: Bietet teilbare Notizen und weitere Informationen für deine Gilden-, Gruppen- und Raid-Community an.
 ## Notes-zhTW: 提供可共享的註記和其他信息給你的公會，隊伍和團隊成員。
 ## Notes-zhCN: 提供可共享的注记和其它信息给你的公会，队伍和团队成员。
-## Author: Bethink
+## Author: Bethink, Maintained for legion Horrorbrood-Madoran
 ## Updated for MoP: DrKazza
 ## Updated for WoD: LintyDruid
 ## Updated for Legion: Horrorbrood
-## Version: 1.7.0.6
+## Version: 1.7.0.8
 ## SavedVariables: BossNotesDB
 ## OptionalDeps: Ace3, LibSchema-1.0, LibDBIcon-1.0
-## X-Curse-Packaged-Version: 1.7.0.6
+## X-Curse-Packaged-Version: 1.7.0.8
 ## X-Curse-Project-Name: Boss Notes
 ## X-Curse-Project-ID: boss-notes
 ## X-Curse-Repository-ID: wow/boss-notes/mainline

@@ -1,3 +1,6 @@
+== BossNotesV1.7.08 ==
+MAJOR UPDATE added version control will let you know if its out of date.(needs testing please submit errors). When you hover over player it will display ilevel. Updated NPC ids
+
 == BossNotesV1.7.07 ==
 fixed lua error, and added trash ids for the arcway
 

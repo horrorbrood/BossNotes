@@ -173,6 +173,7 @@ function BossNotesAbilities:OnEnable ()
 	self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	self:RegisterEvent("CHAT_MSG_SYSTEM")
 	
+	
 	-- Hooks
 	self:HookScript(GameTooltip, "OnTooltipSetUnit")
 end

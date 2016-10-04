@@ -27,57 +27,57 @@ local DEFAULT_COLOR = { r = 0.77,  g = 0.64, b = 0.0 }
 
 -- Filtered NPCs
 local FILTERED_NPC_IDS = {
-	[510],   -- Water Elemental
-	[2523],  -- Searing Totem
-	[2630],  -- Earthbind Totem
-	[5929],  -- Magma Totem
-	[5950],  -- Flametongue Totem
-	[15438], -- Greater Fire Elemental
-	[15439], -- Fire Elemental Totem
-	[19668], -- Shadowfiend
-	[24207], -- Army of the Dead Ghoul
-	[26125], -- Risen Ghoul
-	[27829], -- Ebon Gargoyle
-	[27893], -- Rune Weapon
-	[28017], -- Bloodworm
-	[28306], -- Anti-Magic Zone
-	[29264], -- Spirit Wolf
-	[29998], -- Desecrated Ground V
-	[31165], -- Searing Totem X
-	[31185], -- Healing Stream Totem IX
-	[31216], -- Mirror Image
-	[31167], -- Magma Totem VII
-	[32775], -- Fire Nova Totem IX
-	[33753], -- Desecrated Ground IV
-	[35642], -- Jeeves
-	[46157], -- Hand of Gul'dan
-	[46954], -- Shadowy Apparition
-	[47244],  -- Mirror Image
-	[100943],	--Earthen Shield Totem
-	[100820],	--sprit wolf
-	[55659],	--wild imp
-	[97369],	--magma totem
-	[78001],	--cloudburst totem
-	[104818],	--Ancestral Protection Totem
-	[100943],	--Earthen Sheild
-	[53006],	--Spirit Link totem
-	[59764],	--Healing Tide Totem
-	[95255],	--Earthquake Totem
-	[60561],	--Earthgrab Totem
-	[91245],	--Lightning Surge Totem
-	[100099],	--Voodoo Totem
-	[97285],	--wind rush totem
-	[3527],	--Healing Stream
-	[102392],	--Resonace Totem
-	[106317],	--Storm totem
-	[106319],	--Ember Totem
-	[106321],	--tailwind totem
-	[113845],	--totem mastery
-	[78116], --water elemental
-	[61146], --black ox
-	[63508], --Xuen
-	[100820], --"Spirit Wolf"
-	[416] --"Imp"
+	[510] = true,   -- Water Elemental
+	[2523] = true,  -- Searing Totem
+	[2630] = true,  -- Earthbind Totem
+	[5929] = true,  -- Magma Totem
+	[5950] = true,  -- Flametongue Totem
+	[15438] = true, -- Greater Fire Elemental
+	[15439] = true, -- Fire Elemental Totem
+	[19668] = true, -- Shadowfiend
+	[24207] = true, -- Army of the Dead Ghoul
+	[26125] = true, -- Risen Ghoul
+	[27829] = true, -- Ebon Gargoyle
+	[27893] = true, -- Rune Weapon
+	[28017] = true, -- Bloodworm
+	[28306] = true, -- Anti-Magic Zone
+	[29264] = true, -- Spirit Wolf
+	[29998] = true, -- Desecrated Ground V
+	[31165] = true, -- Searing Totem X
+	[31185] = true, -- Healing Stream Totem IX
+	[31216] = true, -- Mirror Image
+	[31167] = true, -- Magma Totem VII
+	[32775] = true, -- Fire Nova Totem IX
+	[33753] = true, -- Desecrated Ground IV
+	[35642] = true, -- Jeeves
+	[46157] = true, -- Hand of Gul'dan
+	[46954] = true, -- Shadowy Apparition
+	[47244] = true,  -- Mirror Image
+	[100943] = true,	--Earthen Shield Totem
+	[100820] = true,	--sprit wolf
+	[55659] = true,	--wild imp
+	[97369] = true,	--magma totem
+	[78001] = true,	--cloudburst totem
+	[104818] = true,	--Ancestral Protection Totem
+	[100943] = true,	--Earthen Sheild
+	[53006] = true,	--Spirit Link totem
+	[59764] = true,	--Healing Tide Totem
+	[95255] = true,	--Earthquake Totem
+	[60561] = true,	--Earthgrab Totem
+	[91245] = true,	--Lightning Surge Totem
+	[100099] = true,	--Voodoo Totem
+	[97285] = true,	--wind rush totem
+	[3527] = true,	--Healing Stream
+	[102392] = true,	--Resonace Totem
+	[106317] = true,	--Storm totem
+	[106319] = true,	--Ember Totem
+	[106321] = true,	--tailwind totem
+	[113845] = true,	--totem mastery
+	[78116] = true, --water elemental
+	[61146] = true, --black ox
+	[63508] = true, --Xuen
+	[100820] = true, --"Spirit Wolf"
+	[416] = true --"Imp"
 	
 }
 
@@ -115,11 +115,16 @@ end
 -- Enables the data subsystem
 function BossNotes:EnableData ()
 	self:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
+	self:RegisterEvent("PLAYER_ENTERING_WORLD", "MainAddonMessageBN")
+	self:RegisterEvent("PLAYER_REGEN_DISABLED", "MainAddonMessageBN")
+	self:RegisterEvent("PLAYER_REGEN_ENABLED", "MainAddonMessageBN")
 	self:RegisterEvent("PLAYER_TARGET_CHANGED")
+	self:RegisterEvent("CHAT_MSG_ADDON", "VERSIONUPDATE")
 end
 
 -- Disables the data subsystem
 function BossNotes:DisableData  ()
+
 end
 
 
@@ -348,11 +353,178 @@ end
 
 ----------------------------------------------------------------------
 -- Event handlers
+local BNN = "|cffe1a500Boss|cff69ccf0Notes|cffffffff" 
+local MYVERSION = GetAddOnMetadata("BossNotes", "Version")
+local VERSION = MYVERSION:gsub('[%.]', '')
+local curVer = "|cffffffff "..MYVERSION.."|cffe1a500"
 
--- Handles the UPDATE_MOUSEOVER_UNIT event
-function BossNotes:UPDATE_MOUSEOVER_UNIT ()
-	self:CheckUnit("mouseover")
+-- function max(a)
+  -- local values = {}
+  -- for k,v in pairs(a) do
+    -- if type(k) == "number" and type(v) == "number" then
+      -- values[#values+1] = v
+    -- end
+  -- end
+  -- table.sort(values) -- automatically sorts lowest to highest
+
+  -- return values[#values]
+  
+-- end
+local ENTERCBN 
+function BossNotes:MainAddonMessageBN ()
+RegisterAddonMessagePrefix("BossNotes")
+if ENTERCBN == nil then
+ENTERCBN = 1
 end
+	if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) and IsInInstance() and not C_Garrison:IsOnGarrisonMap() then
+				if (ENTERCBN >= 1 and ENTERCBN <= 9) then
+				ENTERCBN = ENTERCBN + 1
+			
+				SendAddonMessage("BossNotes", VERSION, "INSTANCE_CHAT")	
+				end
+				if (ENTERCBN >= 10 and ENTERCBN <=15) then
+				ENTERCBN = ENTERCBN + 1
+				end
+				if (ENTERCBN == 16) then
+				ENTERCBN = 1
+				end
+	else
+		if IsInRaid() then
+				if (ENTERCBN >= 1 and ENTERCBN <= 9) then
+				ENTERCBN = ENTERCBN + 1
+				SendAddonMessage("BossNotes", VERSION, "RAID");
+				
+				end
+				if (ENTERCBN >= 10 and ENTERCBN <=15) then
+				ENTERCBN = ENTERCBN + 1
+				end
+				if (ENTERCBN == 16) then
+				ENTERCBN = 1
+				end
+			
+		elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
+		if (ENTERCBN >= 1 and ENTERCBN <= 9) then
+				ENTERCBN = ENTERCBN + 1
+				SendAddonMessage("BossNotes", VERSION, "PARTY");
+				
+				end
+				if (ENTERCBN >= 10 and ENTERCBN <=15) then
+				ENTERCBN = ENTERCBN + 1
+				end
+				if (ENTERCBN == 16) then
+				ENTERCBN = 1
+				end
+			
+		end
+	end
+if (ENTERCBN >= 1 and ENTERCBN <= 9) then
+				ENTERCBN = ENTERCBN + 1
+				SendAddonMessage("BossNotes", VERSION, "PARTY");
+			
+				end
+				if (ENTERCBN >= 10 and ENTERCBN <=15) then
+				ENTERCBN = ENTERCBN + 1
+				end
+				if (ENTERCBN == 16) then
+				ENTERCBN = 1
+				end
+end
+-- Handles the UPDATE_MOUSEOVER_UNIT event
+local count --stop addon from sending to many messages
+local counts
+function BossNotes:UPDATE_MOUSEOVER_UNIT ()
+self:CheckUnit("mouseover")
+local playerFactionIndexbn
+local mousoverfactionbn
+local isPlayerbn = UnitIsPlayer("mouseover")
+local name = GetUnitName("mouseover", true)
+total, equipped, pvp = GetAverageItemLevel("mouseover")
+
+	if UnitFactionGroup("player") == "Horde" then 
+	playerFactionIndex = 1 
+		else 
+		playerFactionIndex = 0 
+	end
+	--player is horde so ignore alliance players to avoid player not online because that player isnt in horde
+		if (UnitFactionGroup("mouseover") == "Horde" and playerFactionIndexbn == 1 and isPlayerbn == true) then
+		GameTooltip:AddLine("BossNotes: Player ilevel"..equipped, true)
+		GameTooltip:Show()
+			if count == nil then
+			count = 1
+			end
+					if (count >= 1 and count <= 9) then
+					count = count + 1
+					SendAddonMessage("BossNotes", VERSION, "WHISPER", name)		
+					end
+				if (count >= 10 and count <=60) then
+				count = count + 1
+				end
+			if (count == 61) then
+			count = 1
+			end
+		end	
+	--player is alliance so ignore horde players to avoid player not online because that player isnt in alliance
+	if(UnitFactionGroup("mouseover") == "Alliance" and playerFactionIndexbn == 0 and isPlayerbn == true) then
+	GameTooltip:AddLine("BossNotes: Player ilevel"..equipped, true)
+	GameTooltip:Show()
+		if counts == nil then
+		counts = 1
+		end
+				if (counts == 1 and counts <= 9) then
+				SendAddonMessage("BossNotes", VERSION, "WHISPER", name)
+				counts = counts + 1
+				end
+			if (counts >= 10 and counts <=60) then
+			counts = counts + 1
+			end
+		if (counts == 61) then
+		counts = 1				
+		end
+	end	
+end		
+
+
+local ADDON_BN_C
+function BossNotes:VERSIONUPDATE (event, arg1, VERSIONS, arg3, arg4)
+	-- arg1: prefix
+	-- VERSIONS: message
+	-- arg3: channel
+	-- arg4: sender
+	if arg1 == "BossNotes" then
+		if(VERSIONS > VERSION) then
+			if ADDON_BN_C == nil then
+			ADDON_BN_C = 1
+			end
+			if (ADDON_BN_C >= 1 and ADDON_BN_C <= 5) then
+			ADDON_BN_C = ADDON_BN_C + 1
+			print(""..BNN.." A New version is avaiable please download")
+			return
+			end
+			if (ADDON_BN_C >= 6 and ADDON_BN_C <=40) then
+			ADDON_BN_C = ADDON_BN_C + 1
+			end
+			if (ADDON_BN_C == 41) then
+			ADDON_BN_C = 1
+			end
+		end
+		--if the version recived from another addon is lower then ours do nothing and clear table
+		if(VERSIONS < VERSION) then
+		return
+		end
+		--if the version is the same do nothing and clear table
+		if(VERSIONS == VERSION) then
+		--VERSIONS = nil
+		return
+		end
+		if(VERSIONS == nil) then
+		return
+		end
+	
+	end
+end
+
+
+
 
 -- Handles the PLAYER_TARGET_CHANGED event
 function BossNotes:PLAYER_TARGET_CHANGED ()
