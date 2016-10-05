@@ -31,7 +31,7 @@ local EVENT_SUFFIXES = BossNotesAbilities:GetEventSuffixes()
 
 -- The heavy bandage of each major game release, in decending order for
 -- efficient matching.
-local BANDAGES = { 34722, 21991, 14530 }
+local BANDAGES = { 133940, 111603, 72986, 53050, 34722, 21991, 14530 }
 
 -- Aura filters
 local AURA_FILTERS = { "HELPFUL", "HARMFUL" }

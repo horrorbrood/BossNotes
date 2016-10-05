@@ -71,7 +71,7 @@ function BossNotesEmotes:OnEnable ()
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL", "HandleEmote")
 	self:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
 	self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-	self:RegisterEvent("GROUP_ROSTER_UPDATE")
+	self:RegisterEvent("PARTY_MEMBERS_CHANGED")
 	
 end
 
@@ -308,7 +308,7 @@ function BossNotesEmotes:COMBAT_LOG_EVENT_UNFILTERED (message, _, event, _, sour
 end
 
 -- Handle changes in the party or raid roster
-function BossNotesEmotes:GROUP_ROSTER_UPDATE (message)
+function BossNotesEmotes:PARTY_MEMBERS_CHANGED (message)
  --table.wipe(self.members)
 	if (UnitInRaid("player")) then
 		for i = 1, MAX_RAID_MEMBERS do

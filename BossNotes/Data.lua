@@ -438,17 +438,17 @@ local playerFactionIndexbn
 local mousoverfactionbn
 local isPlayerbn = UnitIsPlayer("mouseover")
 local name = GetUnitName("mouseover", true)
-total, equipped, pvp = GetAverageItemLevel("mouseover")
+
 
 	if UnitFactionGroup("player") == "Horde" then 
-	playerFactionIndex = 1 
+	playerFactionIndexbn = 1 
 		else 
-		playerFactionIndex = 0 
+		playerFactionIndexbn = 0 
 	end
+	
 	--player is horde so ignore alliance players to avoid player not online because that player isnt in horde
 		if (UnitFactionGroup("mouseover") == "Horde" and playerFactionIndexbn == 1 and isPlayerbn == true) then
-		GameTooltip:AddLine("BossNotes: Player ilevel"..equipped, true)
-		GameTooltip:Show()
+
 			if count == nil then
 			count = 1
 			end
@@ -465,8 +465,7 @@ total, equipped, pvp = GetAverageItemLevel("mouseover")
 		end	
 	--player is alliance so ignore horde players to avoid player not online because that player isnt in alliance
 	if(UnitFactionGroup("mouseover") == "Alliance" and playerFactionIndexbn == 0 and isPlayerbn == true) then
-	GameTooltip:AddLine("BossNotes: Player ilevel"..equipped, true)
-	GameTooltip:Show()
+	
 		if counts == nil then
 		counts = 1
 		end
@@ -490,7 +489,11 @@ function BossNotes:VERSIONUPDATE (event, arg1, VERSIONS, arg3, arg4)
 	-- VERSIONS: message
 	-- arg3: channel
 	-- arg4: sender
+	
 	if arg1 == "BossNotes" then
+VERSIONS = tonumber(VERSIONS)
+if(VERSIONS ~= nil) then
+VERSIONS = tostring(VERSIONS)
 		if(VERSIONS > VERSION) then
 			if ADDON_BN_C == nil then
 			ADDON_BN_C = 1
@@ -520,6 +523,7 @@ function BossNotes:VERSIONUPDATE (event, arg1, VERSIONS, arg3, arg4)
 		return
 		end
 	
+	end
 	end
 end
 
