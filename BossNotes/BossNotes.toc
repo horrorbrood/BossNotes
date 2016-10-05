@@ -8,10 +8,10 @@
 ## Updated for MoP: DrKazza
 ## Updated for WoD: LintyDruid
 ## Updated for Legion: Horrorbrood
-## Version: 1.7.0.8
+## Version: 1.7.0.9
 ## SavedVariables: BossNotesDB
 ## OptionalDeps: Ace3, LibSchema-1.0, LibDBIcon-1.0
-## X-Curse-Packaged-Version: 1.7.0.8
+## X-Curse-Packaged-Version: 1.7.0.9
 ## X-Curse-Project-Name: Boss Notes
 ## X-Curse-Project-ID: boss-notes
 ## X-Curse-Repository-ID: wow/boss-notes/mainline
