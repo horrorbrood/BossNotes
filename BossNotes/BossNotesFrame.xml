@@ -242,7 +242,7 @@ See LICENSE.txt for license terms.
 			</Button>
 			
 			<!-- Drop downs -->
-			<Frame name="BossNotesInstanceDropDown" inherits="UIDropDownMenuTemplate">
+			<Frame name="BossNotesInstanceDropDown" inherits="Lib_UIDropDownMenuTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset>
@@ -251,10 +251,10 @@ See LICENSE.txt for license terms.
 					</Anchor>
 				</Anchors>
 				<Scripts>
-					<OnLoad>UIDropDownMenu_SetWidth(self, 120)</OnLoad>
+					<OnLoad>Lib_UIDropDownMenu_SetWidth(self, 120)</OnLoad>
 				</Scripts>
 			</Frame>
-			<Frame name="BossNotesEncounterDropDown" inherits="UIDropDownMenuTemplate" id="2">
+			<Frame name="BossNotesEncounterDropDown" inherits="Lib_UIDropDownMenuTemplate" id="2">
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset>
@@ -263,7 +263,7 @@ See LICENSE.txt for license terms.
 					</Anchor>
 				</Anchors>
 				<Scripts>
-					<OnLoad>UIDropDownMenu_SetWidth(self, 120)</OnLoad>
+					<OnLoad>Lib_UIDropDownMenu_SetWidth(self, 120)</OnLoad>
 				</Scripts>
 			</Frame>
 			
@@ -410,7 +410,7 @@ See LICENSE.txt for license terms.
 			</ScrollFrame>
 			
 			<!-- Buttons -->
-			<Frame name="BossNotesChatDropDown" inherits="UIDropDownMenuTemplate">
+			<Frame name="BossNotesChatDropDown" inherits="Lib_UIDropDownMenuTemplate">
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset>
@@ -419,7 +419,7 @@ See LICENSE.txt for license terms.
 					</Anchor>
 				</Anchors>
 				<Scripts>
-					<OnLoad>UIDropDownMenu_SetWidth(self, 80)</OnLoad>
+					<OnLoad>Lib_UIDropDownMenu_SetWidth(self, 80)</OnLoad>
 				</Scripts>
 			</Frame>
 			<Button name="BossNotesRefreshButton" inherits="UIPanelButtonTemplate">

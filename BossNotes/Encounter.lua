@@ -343,6 +343,55 @@ BOSS_NOTES_ENCOUNTERS = {
 
 				},
 			},
+			{
+				--Return To Karazhan
+				instanceId = "LRTK",
+				npcIds = {114262, 114312, 114339, 113971, 114247, 114350, 116494, 114790, 17007, 
+				19876, 115439, 115441, 115440, 19872, 114328, 114261, 114284},
+				encounters = {
+					{
+						-- "Attumen the Huntsman"
+						encounterId = 114262,
+						npcIds = {114262}
+					},
+					{
+						-- "Moroes"
+						encounterId = 114312,
+						npcIds = {114312, 17007, 19876, 115439, 115441, 115440, 19872}
+					},
+					{
+						-- "Opera Hall"
+						encounterId = 114339,
+						npcIds = {114339, 114328, 114261, 114284}
+					},
+					{
+						-- "Maiden of Virtue"
+						encounterId = 113971,
+						npcIds = {113971}
+					},
+										{
+						-- "The Curator"
+						encounterId = 114247,
+						npcIds = {114247}
+					},
+					{
+						-- "Shade of Medivh"
+						encounterId = 114350,
+						npcIds = {114350}
+					},
+					{
+						-- "Mana Devourer"
+						encounterId = 116494,
+						npcIds = {116494}
+					},
+					{
+						-- "Viz'aduum the Watcher"
+						encounterId = 114790,
+						npcIds = {114790}
+					},
+				},
+			},
+			
 		},
 	},
 	{
@@ -353,7 +402,7 @@ BOSS_NOTES_ENCOUNTERS = {
 			{
 				--Emerald Nightmare
 				instanceId = "LEN",
-				npcIds = { },
+				npcIds = {102672, 105393, 106087, 100497, 102679, 102682, 102681, 102683, 113534, 103769},
 				encounters = {
 					{
 						-- "Nythendra"
@@ -404,6 +453,85 @@ BOSS_NOTES_ENCOUNTERS = {
 						-- "Xavius"-
 						encounterId = 103769,
 						npcIds = {103769}
+					},
+				},
+			},
+			{
+				--Trial of Valor
+				instanceId = "TOV",
+				npcIds = {114263, 96759, 114344 },
+				encounters = {
+					{
+						-- "Odyn"
+						encounterId = 114263,
+						npcIds = {114263}
+					},
+					{
+						-- "Helya"
+						encounterId = 96759,
+						npcIds = {96759}
+					},
+					{
+						-- "Guarm"
+						encounterId = 114344,
+						npcIds = {114344}
+					},
+				},
+			},
+			{
+				--The Nighthold
+				instanceId = "TNH",
+				npcIds = {102263, 104415, 104288, 107699, 103758, 104528, 101002, 103685, 110965, 105503},
+				encounters = {
+					{
+						-- "Skorpyron"
+						encounterId = 102263,
+						npcIds = {102263}
+					},
+					{
+						-- "Chronomatic Anomaly"
+						encounterId = 104415,
+						npcIds = {104415}
+					},
+					{
+						-- "Trilliax"
+						encounterId = 104288,
+						npcIds = {104288}
+					},
+					{
+						-- "Spellblade Aluriel"
+						encounterId = 107699,
+						npcIds = {107699}
+					},
+					{
+						-- "Star Augur Etraeus"
+						encounterId = 103758,
+						npcIds = {103758}
+					},
+					{
+						-- "High Botanist Tel'arn"
+						encounterId = 104528,
+						npcIds = {104528}
+					},
+					{
+						-- "Krosus"-
+						encounterId = 101002,
+						npcIds = {101002}
+					},
+					{
+						-- "Tichondrius"
+						encounterId = 103685,
+						npcIds = {103685}
+					},
+					{
+						-- "Elisande"
+						encounterId = 110965,
+						npcIds = {110965}
+					},
+					{
+						-- "Gul'dan"
+						encounterId = 105503,
+						npcIds = {105503}
 					},
 				},
 			},
@@ -469,6 +597,26 @@ BOSS_NOTES_ENCOUNTERS = {
 						--"Withered J'im"
 						encounterId = 112350,
 						npcIds = {112350}
+					},
+					{
+						--"Sivash"
+						encounterId = 117470,
+						npcIds = {117470}
+					},
+					{
+						--"Malificus"
+						encounterId = 117303,
+						npcIds = {117303}
+					},
+					{
+						--"Apocron"
+						encounterId = 121124,
+						npcIds = {121124}
+					},
+					{
+						--"Brutallus"
+						encounterId = 117239,
+						npcIds = {117239}
 					},						
 				},
 			},

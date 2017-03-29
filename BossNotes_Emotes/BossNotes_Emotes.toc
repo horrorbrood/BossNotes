@@ -1,4 +1,4 @@
-﻿## Interface: 70000
+﻿## Interface: 70200
 ## Title: Boss Notes [|cffe76f00Emotes|r]
 ## Title-deDE: Boss Notes [|cffe76f00Emotes|r]
 ## Title-zhTW: Boss Notes [|cffe76f00表情|r]

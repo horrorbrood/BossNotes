@@ -1,4 +1,4 @@
-﻿## Interface: 70000
+﻿## Interface: 70200
 ## Title: Boss Notes [|cffe76f00Abilities|r]
 ## Title-deDE: Boss Notes [|cffe76f00Fähigkeiten|r]
 ## Title-zhTW: Boss Notes [|cffe76f00技能|r]

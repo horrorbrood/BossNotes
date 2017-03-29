@@ -1,3 +1,19 @@
+== BossNotesV1.7.0.14 ==
+Changed drop down menues so that que to dungeon is possible now please report any problems
+UPDATE FOR 7.2 New raid pending release
+
+== BossNotesV1.7.0.13 ==
+The Nighthold Added
+
+== BossNotesV1.7.0.12 ==
+Trial of Valor added
+
+
+
+== BossNotesV1.7.0.11 ==
+Added Return To kara and updated interface for new patch
+
+
 == BossNotesV1.7.0.9 ==
 update to version control message
 

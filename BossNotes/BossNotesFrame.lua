@@ -172,18 +172,18 @@ end
 -- Handles an activation evevent from the data subsystem
 function BossNotes:BOSS_NOTES_ACTIVATION (message, instance, encounter)
 	-- Update instance
-	UIDropDownMenu_SetSelectedValue(BossNotesInstanceDropDown, instance)
-	UIDropDownMenu_SetText(BossNotesInstanceDropDown, instance.name)
+	Lib_UIDropDownMenu_SetSelectedValue(BossNotesInstanceDropDown, instance)
+	Lib_UIDropDownMenu_SetText(BossNotesInstanceDropDown, instance.name)
 	self.selectedInstance = instance
 	self:UpdateEncounters(true)
 	
 	-- Update encounter
 	if encounter then
-		UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, encounter)
-		UIDropDownMenu_SetText(BossNotesEncounterDropDown, encounter.name)
+		Lib_UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, encounter)
+		Lib_UIDropDownMenu_SetText(BossNotesEncounterDropDown, encounter.name)
 	else
-		UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, ALL_ELEMENTS)
-		UIDropDownMenu_SetText(BossNotesEncounterDropDown, L["ALL_ENCOUNTERS"])
+		Lib_UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, ALL_ELEMENTS)
+		Lib_UIDropDownMenu_SetText(BossNotesEncounterDropDown, L["ALL_ENCOUNTERS"])
 	end
 		
 	self.selectedEncounter = encounter
@@ -210,41 +210,41 @@ end
 
 -- Updates the chat drop down
 function BossNotes:InitializeChats ()
-	UIDropDownMenu_Initialize(BossNotesChatDropDown, BossNotesChatDropDown_Initialize)
-	UIDropDownMenu_SetText(BossNotesChatDropDown, L["SEND_TO"])
+	Lib_UIDropDownMenu_Initialize(BossNotesChatDropDown, BossNotesChatDropDown_Initialize)
+	Lib_UIDropDownMenu_SetText(BossNotesChatDropDown, L["SEND_TO"])
 end
 
 -- Initializes the chat drop down
 function BossNotesChatDropDown_Initialize ()
 	-- Add static chats
 	for _, chat in ipairs(CHATS) do
-		info = UIDropDownMenu_CreateInfo()
+		info = Lib_UIDropDownMenu_CreateInfo()
 		info.text = chat.text
 		info.value = chat.value
 		info.func = BossNotes_OnChatDropDownClick
-		UIDropDownMenu_AddButton(info)
+		Lib_UIDropDownMenu_AddButton(info)
 	end
 	
 	-- Whisper
 	if UnitIsPlayer("target") then
-		info = UIDropDownMenu_CreateInfo()
+		info = Lib_UIDropDownMenu_CreateInfo()
 		info.text = UnitName("target")
 		info.value = "WHISPER"
 		info.arg1 = UnitName("target")
 		info.func = BossNotes_OnChatDropDownClick
-		UIDropDownMenu_AddButton(info)
+		Lib_UIDropDownMenu_AddButton(info)
 	end
 	
 	-- Channels
 	for i = 1, MAX_WOW_CHAT_CHANNELS do
 		local id = select(i * 2 - 1, GetChannelList())
 		if id then
-			info = UIDropDownMenu_CreateInfo()
+			info = Lib_UIDropDownMenu_CreateInfo()
 			info.text = select(i * 2, GetChannelList())
 			info.value = "CHANNEL"
 			info.arg1 = id
 			info.func = BossNotes_OnChatDropDownClick
-			UIDropDownMenu_AddButton(info)
+			Lib_UIDropDownMenu_AddButton(info)
 		end
 	end
 end
@@ -301,14 +301,14 @@ end
 
 -- Initializes the instances
 function BossNotes:InitializeInstances ()
-	UIDropDownMenu_Initialize(BossNotesInstanceDropDown, BossNotesInstanceDropDown_Initialize, nil, 1)
-	UIDropDownMenu_SetSelectedValue(BossNotesInstanceDropDown, ALL_ELEMENTS)
+	Lib_UIDropDownMenu_Initialize(BossNotesInstanceDropDown, BossNotesInstanceDropDown_Initialize, nil, 1)
+	Lib_UIDropDownMenu_SetSelectedValue(BossNotesInstanceDropDown, ALL_ELEMENTS)
 end
 
 -- Updates the instances drop down
 function BossNotes:UpdateInstances (limited)
-	UIDropDownMenu_SetSelectedValue(BossNotesInstanceDropDown, ALL_ELEMENTS)
-	UIDropDownMenu_SetText(BossNotesInstancesDropDown, L["ALL_INSTANCES"])
+	Lib_UIDropDownMenu_SetSelectedValue(BossNotesInstanceDropDown, ALL_ELEMENTS)
+	Lib_UIDropDownMenu_SetText(BossNotesInstancesDropDown, L["ALL_INSTANCES"])
 	self.selectedInstance = nil
 	if not limited then
 		self:UpdateEncounters()
@@ -319,29 +319,29 @@ end
 function BossNotesInstanceDropDown_Initialize (frame, level)
 	if level == 1 then
 		-- Add "All Instances"
-		local info = UIDropDownMenu_CreateInfo()
+		local info = Lib_UIDropDownMenu_CreateInfo()
 		info.text = L["ALL_INSTANCES"]
 		info.value = ALL_ELEMENTS
 		info.func = BossNotes_OnInstanceDropDownClick
-		UIDropDownMenu_AddButton(info, level)
+		Lib_UIDropDownMenu_AddButton(info, level)
 		
 		-- Add instance sets
 		for _, instanceSet in ipairs(BOSS_NOTES_ENCOUNTERS) do
-			info = UIDropDownMenu_CreateInfo()
+			info = Lib_UIDropDownMenu_CreateInfo()
 			info.text = instanceSet.name
 			info.value = instanceSet
 			info.hasArrow = true
 			info.notCheckable = true
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 		end
 	elseif level == 2 then
-		local instanceSet = UIDROPDOWNMENU_MENU_VALUE
+		local instanceSet = LIB_UIDROPDOWNMENU_MENU_VALUE
 		for _, instance in ipairs(instanceSet.instances) do 
-			info = UIDropDownMenu_CreateInfo()
+			info = Lib_UIDropDownMenu_CreateInfo()
 			info.text = BossNotes:GetContextText(instance, nil)
 			info.value = instance
 			info.func = BossNotes_OnInstanceDropDownClick
-			UIDropDownMenu_AddButton(info, level)
+			Lib_UIDropDownMenu_AddButton(info, level)
 		end
 	end
 end
@@ -350,9 +350,9 @@ end
 function BossNotes_OnInstanceDropDownClick (button)
 	CloseDropDownMenus()
 	if button.value == ALL_ELEMENTS then
-		UIDROPDOWNMENU_MENU_LEVEL = 1
+		LIB_UIDROPDOWNMENU_MENU_LEVEL = 1
 	end
-	UIDropDownMenu_SetSelectedValue(BossNotesInstanceDropDown, button.value)
+	Lib_UIDropDownMenu_SetSelectedValue(BossNotesInstanceDropDown, button.value)
 	if button.value ~= ALL_ELEMENTS then
 		BossNotes.selectedInstance = button.value
 	else
@@ -363,14 +363,14 @@ end
 
 -- Initializes the encounters drop down
 function BossNotes:InitializeEncounters ()
-	UIDropDownMenu_Initialize(BossNotesEncounterDropDown, BossNotes_InitializeEncounterDropDown)
-	UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, ALL_ELEMENTS)
+	Lib_UIDropDownMenu_Initialize(BossNotesEncounterDropDown, BossNotes_InitializeEncounterDropDown)
+	Lib_UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, ALL_ELEMENTS)
 end
 
 -- Updates the encounters drop down
 function BossNotes:UpdateEncounters (limited)
-	UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, ALL_ELEMENTS)
-	UIDropDownMenu_SetText(BossNotesEncounterDropDown, L["ALL_ENCOUNTERS"])
+	Lib_UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, ALL_ELEMENTS)
+	Lib_UIDropDownMenu_SetText(BossNotesEncounterDropDown, L["ALL_ENCOUNTERS"])
 	self.selectedEncounter = nil
 	if not limited then
 		self:UpdateSources()
@@ -380,27 +380,27 @@ end
 -- Initializes the encounters drop down
 function BossNotes_InitializeEncounterDropDown ()
 	-- Add "All Encounters"
-	local info = UIDropDownMenu_CreateInfo()
+	local info = Lib_UIDropDownMenu_CreateInfo()
 	info.text = L["ALL_ENCOUNTERS"]
 	info.value = ALL_ELEMENTS
 	info.func = BossNotes_OnEncounterDropDownClick
-	UIDropDownMenu_AddButton(info)
+	Lib_UIDropDownMenu_AddButton(info)
 	
 	-- Add effective encounters
 	if BossNotes.selectedInstance then
 		for _, encounter in ipairs(BossNotes.selectedInstance.encounters) do
-			info = UIDropDownMenu_CreateInfo()
+			info = Lib_UIDropDownMenu_CreateInfo()
 			info.text = BossNotes:GetContextText(BossNotes.selectedInstance, encounter)
 			info.value = encounter
 			info.func = BossNotes_OnEncounterDropDownClick
-			UIDropDownMenu_AddButton(info)
+			Lib_UIDropDownMenu_AddButton(info)
 		end
 	end
 end
 
 -- Handles the selection of an encounter
 function BossNotes_OnEncounterDropDownClick (button)
-	UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, button.value)
+	Lib_UIDropDownMenu_SetSelectedValue(BossNotesEncounterDropDown, button.value)
 	if button.value ~= ALL_ELEMENTS then
 		BossNotes.selectedEncounter = button.value
 	else

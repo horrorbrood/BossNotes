@@ -1,4 +1,4 @@
-﻿## Interface: 70000
+﻿## Interface: 70200
 ## Title: Boss Notes
 ## Notes: Provides shareable notes and other information for your guild, party and raid community. English only supported for legion
 ## Notes-deDE: Bietet teilbare Notizen und weitere Informationen für deine Gilden-, Gruppen- und Raid-Community an.
@@ -8,7 +8,7 @@
 ## Updated for MoP: DrKazza
 ## Updated for WoD: LintyDruid
 ## Updated for Legion: Horrorbrood
-## Version: 1.7.0.10
+## Version: 1.7.0.14
 ## SavedVariables: BossNotesDB
 ## OptionalDeps: Ace3, LibSchema-1.0, LibDBIcon-1.0
 ## X-Curse-Packaged-Version: 1.7.0.10

@@ -21,7 +21,7 @@ local L = LibStub("AceLocale-3.0"):GetLocale("BossNotes")
 BOSS_NOTES_ORDER_PERSONAL = 100
 BOSS_NOTES_ORDER_COLLECTION = 200
 BOSS_NOTES_ORDER_COMMUNITY = 300
-
+inLockdown = InCombatLockdown()
 -- Default color (0xc4a600)
 local DEFAULT_COLOR = { r = 0.77,  g = 0.64, b = 0.0 }
 
@@ -115,8 +115,8 @@ end
 -- Enables the data subsystem
 function BossNotes:EnableData ()
 	self:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
-	self:RegisterEvent("PLAYER_ENTERING_WORLD", "MainAddonMessageBN")
-	self:RegisterEvent("PLAYER_REGEN_DISABLED", "MainAddonMessageBN")
+	--self:RegisterEvent("PLAYER_ENTERING_WORLD", "MainAddonMessageBN")
+	--self:RegisterEvent("PLAYER_REGEN_DISABLED", "MainAddonMessageBN")
 	self:RegisterEvent("PLAYER_REGEN_ENABLED", "MainAddonMessageBN")
 	self:RegisterEvent("PLAYER_TARGET_CHANGED")
 	self:RegisterEvent("CHAT_MSG_ADDON", "VERSIONUPDATE")
@@ -373,6 +373,9 @@ local curVer = "|cffffffff "..MYVERSION.."|cffe1a500"
 local ENTERCBN 
 function BossNotes:MainAddonMessageBN ()
 RegisterAddonMessagePrefix("BossNotes")
+if inLockdown == 1 then
+return
+else
 if ENTERCBN == nil then
 ENTERCBN = 1
 end
@@ -428,6 +431,7 @@ if (ENTERCBN >= 1 and ENTERCBN <= 9) then
 				if (ENTERCBN == 16) then
 				ENTERCBN = 1
 				end
+				end
 end
 -- Handles the UPDATE_MOUSEOVER_UNIT event
 local count --stop addon from sending to many messages
@@ -439,7 +443,9 @@ local mousoverfactionbn
 local isPlayerbn = UnitIsPlayer("mouseover")
 local name = GetUnitName("mouseover", true)
 
-
+if inLockdown == 1 then
+return
+else
 	if UnitFactionGroup("player") == "Horde" then 
 	playerFactionIndexbn = 1 
 		else 
@@ -480,6 +486,7 @@ local name = GetUnitName("mouseover", true)
 		counts = 1				
 		end
 	end	
+	end
 end		
 
 
@@ -489,7 +496,9 @@ function BossNotes:VERSIONUPDATE (event, arg1, VERSIONS, arg3, arg4)
 	-- VERSIONS: message
 	-- arg3: channel
 	-- arg4: sender
-	
+if inLockdown == 1 then
+return
+else	
 	if arg1 == "BossNotes" then
 VERSIONS = tonumber(VERSIONS)
 if(VERSIONS ~= nil) then
@@ -525,6 +534,7 @@ VERSIONS = tostring(VERSIONS)
 	
 	end
 	end
+end
 end
 
 

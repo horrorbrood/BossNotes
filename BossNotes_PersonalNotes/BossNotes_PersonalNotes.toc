@@ -1,4 +1,4 @@
-﻿## Interface: 70000
+﻿## Interface: 70200
 ## Title: Boss Notes [|cffe76f00Personal Notes|r]
 ## Title-deDE: Boss Notes [|cffe76f00Persönliche Notizen|r]
 ## Title-zhTW: Boss Notes [|cffe76f00私人註記|r]

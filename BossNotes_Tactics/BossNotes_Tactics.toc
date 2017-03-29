@@ -1,4 +1,4 @@
-﻿## Interface: 70000
+﻿## Interface: 70200
 ## Title: Boss Notes [|cffe76f00Tactics|r]
 ## Title-deDE: Boss Notes [|cffe76f00Taktiken|r]
 ## Title-zhTW: Boss Notes [|cffe76f00戰術|r]

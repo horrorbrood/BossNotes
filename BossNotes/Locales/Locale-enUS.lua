@@ -1688,8 +1688,19 @@ L["instance:LCOF"]="Court Of Stars"
 L["encounter:104215"] = "Patrol Captain Gerdo"
 L["encounter:104217"] = "Talixae Flamewreath"
 L["encounter:106576"] = "Advisor Melandrus"
+--Return to Karazhan
+L["instance:LRTK"]="Return To Karazhan"
+L["encounter:114262"] = "Attumen the Huntsman"
+L["encounter:114312"] = "Moroes"
+L["encounter:114339"] = "Opera Hall"
+L["encounter:113971"] = "Maiden of Virtue"
+L["encounter:114247"] = "The Curator"
+L["encounter:114350"] = "Shade of Medivh"
+L["encounter:116494"] = "Mana Devourer"
+L["encounter:114790"] = "Viz'aduum the Watcher"
 --Raids
 L["LegionRaid"] = "Legion Raid"
+--the emerald nightmare
 L["instance:LEN"]="The Emerald Nightmare"
 L["encounter:102672"] = "Nythendra"
 L["encounter:105393"] = "Il'gynoth"
@@ -1701,6 +1712,24 @@ L["encounter:102681"] = "Taerar"
 L["encounter:102683"] = "Emeriss"
 L["encounter:113534"] = "Cenarius"
 L["encounter:103769"] = "Xavius"
+--trial of valor
+L["instance:TOV"]="Trial of Valor"
+L["encounter:114263"] = "Odyn"
+L["encounter:96759"] = "Helya"
+L["encounter:114344"] = "Guarm"
+--the nighthold
+L["instance:TNH"]="The Nighthold"
+L["encounter:102263"] = "Skorpyron"
+L["encounter:104415"] = "Chronomatic Anomaly"
+L["encounter:104288"] = "Trilliax"
+L["encounter:107699"] = "Spellblade Aluriel"
+L["encounter:103758"] = "Star Augur Etraeus"
+L["encounter:104528"] = "High Botanist Tel'arn"
+L["encounter:101002"] = "Krosus"
+L["encounter:103685"] = "Tichondrius"
+L["encounter:110965"] = "Elisande"
+L["encounter:105503"] = "Gul'dan"
+--world bosses
 L["instance:LO"]="World Bosses"
 L["encounter:109943"] = "Ana-Mouz"
 L["encounter:109331"] = "Calamir"
@@ -1713,5 +1742,20 @@ L["encounter:107544"] = "Nithogg"
 L["encounter:108678"] = "Shar'thos"
 L["encounter:106981"] = "The Soultakers"
 L["encounter:112350"] = "Withered J'im"
-
+L["encounter:117470"] = "Sivash"
+L["encounter:117303"] = "Malificus"
+L["encounter:121124"] = "Apocron"
+L["encounter:117239"] = "Brutallus"
 end
+--[[
+Tomb of sargeras TODO
+116407/harjatan
+115767/mistress-sasszine
+115844/goroth
+120996/atrigan
+120436/fallen-avatar
+118460/engine-of-souls
+118289/maiden-of-vigilance
+108573/kiljaeden
+118523/huntress-kasparian
+--]]

@@ -1,4 +1,4 @@
-﻿## Interface: 70000
+﻿## Interface: 70200
 ## Title: Boss Notes [|cffe76f00Rules|r]
 ## Title-deDE: Boss Notes [|cffe76f00Regeln|r]
 ## Title-zhTW: Boss Notes [|cffe76f00規則|r]
