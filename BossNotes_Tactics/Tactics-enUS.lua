@@ -861,6 +861,11 @@ L["encounter:114247"] = "The Curator"
 L["encounter:114350"] = "Shade of Medivh"
 L["encounter:116494"] = "Mana Devourer"
 L["encounter:114790"] = "Viz'aduum the Watcher"
+--Cathedral of eternal night
+L["encounter:117193"] = "Agronox"
+L["encounter:120746"] = "Mephistroth"
+L["encounter:118804"] = "Domatrax"
+L["encounter:117194"] = "Thrashbite the Scornful"
 --The Nighthold
 L["encounter:102263"] = "Skorpyron"
 L["encounter:104415"] = "Chronomatic Anomaly"

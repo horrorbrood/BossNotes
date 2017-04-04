@@ -583,12 +583,13 @@ local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit
 	
 	-- Check unit type
 	local unitType = type
-	if unitType ~= "Creature" and unitType ~= "Pet" then
+	if (unitType == "Creature" and unitType == "Pet") then
+		return nil
+	end
+	if (unitType == "GameObject" or unitType == "Vehicle" or unitType == "Pet") then
 		return nil
 	end
 	local guid = npc_id
-	
-
 	-- Check unit NPC ID
 	return npc_id
 	end

@@ -391,7 +391,53 @@ BOSS_NOTES_ENCOUNTERS = {
 					},
 				},
 			},
-			
+			{
+				--Cathedral of Eternal Night 3/30/17
+				instanceId = "COEN",
+				npcIds = {120792--[[Illidan Stormrage]], 120374--[[Felguard Destroyer]], 
+						118690--[[Wrathguard Invader]], 119169--[[Fulminating Lasher]], 
+						98167--[[Void Tendril]], 118700--[[Felblight Stalker]], 
+						118724--[[Helblaze Felbringer]], 69791--[[Fire Spirit]], 
+						117855--[[Illidan Stormrage]], 120366--[[Hellblaze Temptress]], 
+						120646--[[Book of Arcane Monstrosities]], 119978--[[Fulminating Lasher]], 
+						119977--[[Stranglevine Lasher]], 120312--[[Maiev Shadowsong]], 
+						118713--[[Felstrider Orbcaster]], 118801--[[Imp]], 
+						118714--[[Hellblaze Temptress]], 117590--[[Shadow of Mephistroth]], 
+						118723--[[Gazerax]], 120556--[[Dreadwing]], 
+						118719--[[Wyrmtongue Scavenger]], 118718--[[Book of Eternal Winter]], 
+						119930--[[Dreadwing]], 118705--[[Nal'asha]], 
+						119923--[[Helblaze Soulmender]], 118706--[[Necrotic Spiderling]], 
+						120405--[[Dreadwing]], 116576--[[Maiev Shadowsong]], 
+						118712--[[Felstrider Enforcer]], 118717--[[Helblaze Imp]], 
+						122238--[[Wondrous Library]], 120727--[[Book of Everlasting Silence]], 
+						118703--[[Felborne Botanist]], 121710--[[Heave Cudgel]], 
+						120014--[[Choking Vines]], 
+						117193--[[Agronox]], 120746--[[Mephistroth]], 
+						118804--[[Domatrax]], 117194--[[Thrashbite the Scornful]]},
+				encounters = {
+					{
+						-- "Agronox"
+						encounterId = 117193,
+						npcIds = {117193}
+					},
+					{
+						-- "Domatrax"
+						encounterId = 118804,
+						npcIds = {118804}
+					},
+					{
+						-- "Thrashbite the Scornful"
+						encounterId = 117194,
+						npcIds = {117194}
+					},
+					{
+						-- "Mephistroth"
+						encounterId = 120746,
+						npcIds = {120746}
+					},
+
+				},
+			},
 		},
 	},
 	{
@@ -400,6 +446,7 @@ BOSS_NOTES_ENCOUNTERS = {
 		raid = true,
 		instances = {
 			{
+			
 				--Emerald Nightmare
 				instanceId = "LEN",
 				npcIds = {102672, 105393, 106087, 100497, 102679, 102682, 102681, 102683, 113534, 103769},

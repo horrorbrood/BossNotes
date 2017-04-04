@@ -1,3 +1,6 @@
+== BossNotesV1.7.0.15 ==
+Added Cathedral of Eternal Night Dungeon
+
 == BossNotesV1.7.0.14 ==
 Changed drop down menues so that que to dungeon is possible now please report any problems
 UPDATE FOR 7.2 New raid pending release
