@@ -15,7 +15,63 @@ BossNotesAbilities = LibStub("AceAddon-3.0"):NewAddon("BossNotesAbilities",
 	"AceEvent-3.0",
 	"AceHook-3.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("BossNotes")
+local FILTERED_NPC_IDS = {
+	[416] = true, --"Imp"
+	[510] = true,   -- Water Elemental
+	[2523] = true,  -- Searing Totem
+	[2630] = true,  -- Earthbind Totem\
+	[3527] = true,	--Healing Stream
+	[5929] = true,  -- Magma Totem
+	[5950] = true,  -- Flametongue Totem
+	[15438] = true, -- Greater Fire Elemental
+	[15439] = true, -- Fire Elemental Totem
+	[19668] = true, -- Shadowfiend
+	[24207] = true, -- Army of the Dead Ghoul
+	[26125] = true, -- Risen Ghoul
+	[27829] = true, -- Ebon Gargoyle
+	[27893] = true, -- Rune Weapon
+	[28017] = true, -- Bloodworm
+	[28306] = true, -- Anti-Magic Zone
+	[29264] = true, -- Spirit Wolf
+	[29998] = true, -- Desecrated Ground V
+	[31165] = true, -- Searing Totem X
+	[31185] = true, -- Healing Stream Totem IX
+	[31216] = true, -- Mirror Image
+	[31167] = true, -- Magma Totem VII
+	[32775] = true, -- Fire Nova Totem IX
+	[33753] = true, -- Desecrated Ground IV
+	[35642] = true, -- Jeeves
+	[46157] = true, -- Hand of Gul'dan
+	[46954] = true, -- Shadowy Apparition
+	[47244] = true,  -- Mirror Image
+	[53006] = true,	--Spirit Link totem
+	[55659] = true,	--wild imp
+	[59764] = true,	--Healing Tide Totem
+	[60561] = true,	--Earthgrab Totem
+	[61146] = true, --black ox
+	[63508] = true, --Xuen
+	[78001] = true,	--cloudburst totem
+	[78116] = true, --water elemental
+	[95255] = true,	--Earthquake Totem
+	[97369] = true,	--magma totem
+	[91245] = true,	--Lightning Surge Totem
+	[97285] = true,	--wind rush totem
+	[100099] = true,	--Voodoo Totem
+	[100820] = true, --"Spirit Wolf"
+	[100943] = true,	--Earthen Shield Totem
+	[102392] = true,	--Resonace Totem
+	[113845] = true,	--totem mastery
+	[104818] = true,	--Ancestral Protection Totem
+	[106317] = true,	--Storm totem
+	[106319] = true,	--Ember Totem
+	[106321] = true	--tailwind totem
 
+
+
+	
+	
+	
+}
 
 ----------------------------------------------------------------------
 -- Constants
@@ -212,13 +268,13 @@ function BossNotesAbilities:OnSources (instance, encounter)
 		end
 		return npcA and not npcB
 	end)
-	
-	-- Build HTML
 	local html = { }
 	local difficulty = self:GetDifficulty(instance and instance.raid)
 	table.insert(html, "<html><body>")
 	for _, npcId in ipairs(npcIds) do
-		local npc = self.db.global.npcs[npcId]
+		local npc = self.db.global.npcs[npcId]	
+		
+		--end
 		if npc then
 			-- Get and sort spells
 			local spells = { }
@@ -325,7 +381,9 @@ function BossNotesAbilities:COMBAT_LOG_EVENT_UNFILTERED (message, timestamp,
 	if not npcId then
 		return
 	end
-	
+	if FILTERED_NPC_IDS[npcId] then
+				return
+	end
 	-- Get (or learn) instance and encounter
 	local instance, encounter, process = BossNotes:GetInstanceAndEncounter(npcId)
 	if not process then
@@ -418,6 +476,9 @@ function BossNotesAbilities:OnTooltipSetUnit (gameTooltip)
 		if npcId then
 		
 			local npc = self.db.global.npcs[npcId]
+			if FILTERED_NPC_IDS[npcId] then
+				return
+				end
 			if npc then
 				-- Get current dungeon difficulty bit
 				local _, instanceType = GetInstanceInfo()

@@ -528,7 +528,7 @@ BOSS_NOTES_ENCOUNTERS = {
 			{
 				--The Nighthold
 				instanceId = "TNH",
-				npcIds = {102263, 104415, 104288, 107699, 103758, 104528, 101002, 103685, 110965, 105503},
+				npcIds = {102263, 104415, 104288, 107699, 103758, 104528, 101002, 103685, 110965, 105503, 106643, 104154},
 				encounters = {
 					{
 						-- "Skorpyron"
@@ -572,16 +572,68 @@ BOSS_NOTES_ENCOUNTERS = {
 					},
 					{
 						-- "Elisande"
-						encounterId = 110965,
-						npcIds = {110965}
+						encounterId = 106643,
+						npcIds = {110965, 106643}
 					},
 					{
 						-- "Gul'dan"
-						encounterId = 105503,
-						npcIds = {105503}
+						encounterId = 104154,
+						npcIds = {105503, 104154}
 					},
 				},
 			},
+			{
+				--The Nighthold
+				instanceId = "LTOS",
+				npcIds = {},
+				encounters = {
+					{
+						-- "Goroth"
+						encounterId = 115844,
+						npcIds = {}
+					},
+					{
+						-- "Demoic Inquisition"
+						encounterId = 120996,
+						npcIds = {}
+					},
+					{
+						-- "Harjatan"
+						encounterId = 116407,
+						npcIds = {}
+					},
+					{
+						-- "Sisters of the Moon"
+						encounterId = 118523,
+						npcIds = {}
+					},
+					{
+						-- "Mistress Sassz'ine"
+						encounterId = 115767,
+						npcIds = {}
+					},
+					{
+						-- "The Desolate Host"
+						encounterId = 118460,
+						npcIds = {}
+					},
+					{
+						-- "Maiden of Vigilance"
+						encounterId = 117264,
+						npcIds = {}
+					},
+					{
+						-- "Fallen Avatar"
+						encounterId = 116939,
+						npcIds = {117264}
+					},
+					{
+						-- "Kil'jaeden"
+						encounterId = 117269,
+						npcIds = {}
+					},
+				},
+			},		
 			{
 				--Outdoor
 				instanceId = "LO",

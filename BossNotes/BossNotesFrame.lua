@@ -109,14 +109,16 @@ end
 
 -- OnShow handler
 function BossNotes:OnShowBossNotesFrame (frame)
-	PlaySound("igCharacterInfoOpen")
+	--PlaySound("igCharacterInfoOpen")
+	PlaySound(SOUNDKIT.IG_CHARACTER_INFO_OPEN);
 	SetPortraitTexture(BossNotesFramePortrait, "player")
 	self:UpdateSources()
 end
 
 -- OnHide handler
 function BossNotes:OnHideBossNotesFrame (frame)
-	PlaySound("igCharacterInfoClose")
+	--PlaySound("igCharacterInfoClose")
+	PlaySound(SOUNDKIT.IG_CHARACTER_INFO_CLOSE);
 end
 
 -- Handles the clicking of the note scroll frame

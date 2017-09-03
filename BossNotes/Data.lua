@@ -27,9 +27,11 @@ local DEFAULT_COLOR = { r = 0.77,  g = 0.64, b = 0.0 }
 
 -- Filtered NPCs
 local FILTERED_NPC_IDS = {
+	[416] = true, --"Imp"
 	[510] = true,   -- Water Elemental
 	[2523] = true,  -- Searing Totem
-	[2630] = true,  -- Earthbind Totem
+	[2630] = true,  -- Earthbind Totem\
+	[3527] = true,	--Healing Stream
 	[5929] = true,  -- Magma Totem
 	[5950] = true,  -- Flametongue Totem
 	[15438] = true, -- Greater Fire Elemental
@@ -53,31 +55,32 @@ local FILTERED_NPC_IDS = {
 	[46157] = true, -- Hand of Gul'dan
 	[46954] = true, -- Shadowy Apparition
 	[47244] = true,  -- Mirror Image
-	[100943] = true,	--Earthen Shield Totem
-	[100820] = true,	--sprit wolf
-	[55659] = true,	--wild imp
-	[97369] = true,	--magma totem
-	[78001] = true,	--cloudburst totem
-	[104818] = true,	--Ancestral Protection Totem
-	[100943] = true,	--Earthen Sheild
 	[53006] = true,	--Spirit Link totem
+	[55659] = true,	--wild imp
 	[59764] = true,	--Healing Tide Totem
-	[95255] = true,	--Earthquake Totem
 	[60561] = true,	--Earthgrab Totem
-	[91245] = true,	--Lightning Surge Totem
-	[100099] = true,	--Voodoo Totem
-	[97285] = true,	--wind rush totem
-	[3527] = true,	--Healing Stream
-	[102392] = true,	--Resonace Totem
-	[106317] = true,	--Storm totem
-	[106319] = true,	--Ember Totem
-	[106321] = true,	--tailwind totem
-	[113845] = true,	--totem mastery
-	[78116] = true, --water elemental
 	[61146] = true, --black ox
 	[63508] = true, --Xuen
+	[78001] = true,	--cloudburst totem
+	[78116] = true, --water elemental
+	[95255] = true,	--Earthquake Totem
+	[97369] = true,	--magma totem
+	[91245] = true,	--Lightning Surge Totem
+	[97285] = true,	--wind rush totem
+	[100099] = true,	--Voodoo Totem
 	[100820] = true, --"Spirit Wolf"
-	[416] = true --"Imp"
+	[100943] = true,	--Earthen Shield Totem
+	[102392] = true,	--Resonace Totem
+	[113845] = true,	--totem mastery
+	[104818] = true,	--Ancestral Protection Totem
+	[106317] = true,	--Storm totem
+	[106319] = true,	--Ember Totem
+	[106321] = true	--tailwind totem
+
+
+
+	
+	
 	
 }
 
@@ -176,6 +179,9 @@ function BossNotes:GetOrLearnInstanceAndEncounter (npcId, npcName)
 			self.db.global.instanceEncounters[key] = instanceEncounter
 		end
 		if not instanceEncounter.npcIds[npcId] then
+		if FILTERED_NPC_IDS[npcId] then
+			return
+		end
 			self:Print(string.format(L["LEARNING"],
 					npcName, npcId, instanceEncounter.contextText))
 			instanceEncounter.npcIds[npcId] = npcName
@@ -196,15 +202,23 @@ function BossNotes:GetNpcIds (instance, encounter)
 		if npcIds then
 			for _, npcId in ipairs(npcIds) do
 				if not instanceEncounter.npcIds[npcId] then
-					table.insert(mergedNpcIds, npcId)
+				if FILTERED_NPC_IDS[npcId] then
+				return
 				end
+				table.insert(mergedNpcIds, npcId)
+			end	
 			end
 		end
 		for npcId in pairs(instanceEncounter.npcIds) do
-			table.insert(mergedNpcIds, npcId)
+		if FILTERED_NPC_IDS[npcId] then
+			return
 		end
+			table.insert(mergedNpcIds, npcId)
+			
+			end
+	
 		npcIds = mergedNpcIds
-	end
+	end	
 	return npcIds or EMPTY
 end
 
@@ -310,7 +324,7 @@ function BossNotes:RefreshSources (instance, encounter)
 	-- Refresh providers
 	for name, callbacks in pairs(self.providers) do
 		if callbacks.OnRefresh then
-			callbacks.OnRefresh(instance, encounter)
+			callbacks.OnRefresh(instance, encounter)	
 		end
 	end
 end
@@ -558,6 +572,9 @@ function BossNotes:CheckUnit (unit)
 	
 	-- Get the NPC ID
 	local npcId = self:GetNpcId(UnitGUID(unit))
+	if FILTERED_NPC_IDS[npcId] then
+				return
+				end
 	if not npcId then
 		return
 	end

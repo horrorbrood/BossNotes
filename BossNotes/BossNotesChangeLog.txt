@@ -1,3 +1,21 @@
+== BossNotesV1.7.0.20 ==
+Fixed Menu items taint playsound change for 7.3 thanks HnyBear for reporting it!
+
+== BossNotesV1.7.0.19 ==
+Argus Interface change you will get errors from other addons that have not updated. New dungeons and raid bosses will be added before week 3 when they come out
+
+== BossNotesV1.7.0.18 ==
+Fixed some boss IDS
+
+== BossNotesV1.7.0.17 ==
+Added Tomb of Sargeras
+
+
+
+== BossNotesV1.7.0.16 ==
+Npc should properly be filtered please email ids of npc that should not be recorded, and some clean up
+
+
 == BossNotesV1.7.0.15 ==
 Added Cathedral of Eternal Night Dungeon
 

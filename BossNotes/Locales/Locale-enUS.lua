@@ -1732,8 +1732,19 @@ L["encounter:103758"] = "Star Augur Etraeus"
 L["encounter:104528"] = "High Botanist Tel'arn"
 L["encounter:101002"] = "Krosus"
 L["encounter:103685"] = "Tichondrius"
-L["encounter:110965"] = "Elisande"
-L["encounter:105503"] = "Gul'dan"
+L["encounter:106643"] = "Elisande"
+L["encounter:104154"] = "Gul'dan"
+--Tomb Of Sargeras
+L["instance:LTOS"]="Tomb Of Sargeras"
+L["encounter:115844"] = "Goroth"
+L["encounter:120996"] = "Demoic Inquisition" --116691 belac
+L["encounter:116407"] = "Harjatan"
+L["encounter:118523"] = "Sisters of the Moon" --118518 Priestess Lunaspyre
+L["encounter:115767"] = "Mistress Sassz'ine"
+L["encounter:118460"] = "The Desolate Host" --118462 soulqueen, 
+L["encounter:117264"] = "Maiden of Vigilance"
+L["encounter:116939"] = "Fallen Avatar"
+L["encounter:117269"] = "Kil'jaeden"
 --world bosses
 L["instance:LO"]="World Bosses"
 L["encounter:109943"] = "Ana-Mouz"
@@ -1752,15 +1763,3 @@ L["encounter:117303"] = "Malificus"
 L["encounter:121124"] = "Apocron"
 L["encounter:117239"] = "Brutallus"
 end
---[[
-Tomb of sargeras TODO
-116407/harjatan
-115767/mistress-sasszine
-115844/goroth
-120996/atrigan
-120436/fallen-avatar
-118460/engine-of-souls
-118289/maiden-of-vigilance
-108573/kiljaeden
-118523/huntress-kasparian
---]]
